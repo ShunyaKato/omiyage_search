@@ -5,7 +5,7 @@
   "author": "ShunyaKato",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt-ts",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -13,7 +13,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "@nuxt/typescript-runtime": "^0.4.6",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.7.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
