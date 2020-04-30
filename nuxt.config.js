@@ -23,6 +23,10 @@ export default {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -39,6 +43,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-fontawesome'
   ],
   /*
   ** Build configuration
@@ -47,7 +52,15 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
+  },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
   }
 }
