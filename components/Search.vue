@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <Prefecture />
+    <Area />
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
   components: {
-    Prefecture: () => import("~/components/Prefecture.vue")
+    Area: () => import("~/components/Area.vue")
   }
 })
 export default class Search extends Vue {}

@@ -15,14 +15,14 @@ export default class Main extends Vue {}
 
 <style lang="scss" scoped>
 .main {
-  background-color: #97eec3;
+  background-color: #50d890;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   -webkit-text-stroke: 1px #424242;
-  height: 400px;
+  padding: 30px 0 10px 0;
   &__title {
     font-size: 50px;
     font-weight: bold;
