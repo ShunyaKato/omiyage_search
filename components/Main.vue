@@ -2,9 +2,7 @@
   <div class="main">
     <h1 class="main__title">おみやげ検索</h1>
     <p class="main__text">あなたにピッタリなおみやげを見つけよう！！</p>
-    <div class="main__icon">
-      <font-awesome-icon class="main__icon__outer" icon="angle-down" />
-    </div>
+    <font-awesome-icon class="main__icon" icon="angle-down" />
   </div>
 </template>
 
@@ -35,20 +33,10 @@ export default class Main extends Vue {}
     margin-top: 20px;
   }
   &__icon {
-    position: relative;
-    &__outer {
-      font-size: 100px;
-      color: #ffffff;
-      stroke: #424242;
-      stroke-width: 5;
-    }
-    &__inner {
-      position: absolute;
-      font-size: 90px;
-      color: #ffffff;
-      top: 0px;
-      left: 0px;
-    }
+    font-size: 100px;
+    color: #ffffff;
+    stroke: #424242;
+    stroke-width: 5;
   }
 }
 </style>
