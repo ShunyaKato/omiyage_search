@@ -1,12 +1,16 @@
 <template>
-  <div class="result"></div>
+  <div class="result">
+    <ResultMain />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
-  components: {}
+  components: {
+    ResultMain: () => import("~/components/ResultMain.vue")
+  }
 })
 export default class Result extends Vue {}
 </script>
