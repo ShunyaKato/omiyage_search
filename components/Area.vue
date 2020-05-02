@@ -5,15 +5,15 @@
       <select class="area__wrap__region" v-model="selected">
         <option
           class="area__wrap__region__option"
-          v-for="(region, key, index) in regions"
+          v-for="(area, key, index) in areaData"
           :key="index"
           :value="{selectId: key}"
-        >{{region.name}}</option>
+        >{{area.name}}</option>
       </select>
       <div class="area__wrap__prefecture">
         <div
           class="area__wrap__prefecture__content"
-          v-for="(prefecture, index) in regions[selected.selectId].prefectures"
+          v-for="(prefecture, index) in areaData[selected.selectId].prefectures"
           :key="index"
         >
           <input
@@ -33,11 +33,12 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import { regions } from "~/constants/region.ts";
 
 @Component({})
 export default class Area extends Vue {
-  regions = regions;
+  get areaData() {
+    return this.$store.state.areaData;
+  }
   selected = { selectId: 0 };
 }
 </script>

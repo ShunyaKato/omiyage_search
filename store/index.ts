@@ -38,12 +38,8 @@ export const state = () => ({
     },
     2: {
       name: '北海道',
-      id: 2,
+      id: 1,
       check: false,
-      prefectures: [{
-        prefectureId: 1
-      }
-      ]
     },
     3: {
       name: '東北',
