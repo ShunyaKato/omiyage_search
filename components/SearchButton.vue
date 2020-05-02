@@ -1,6 +1,8 @@
 <template>
   <div class="search-button">
-    <button>検索</button>
+    <nuxt-link to="/result">
+      <button>検索</button>
+    </nuxt-link>
   </div>
 </template>
 <script lang="ts">

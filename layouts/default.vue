@@ -23,4 +23,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+ul {
+  list-style: none;
+}
 </style>
+

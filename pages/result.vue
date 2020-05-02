@@ -1,7 +1,6 @@
 <template>
-  <div class="index">
-    <Main />
-    <Search />
+  <div class="result">
+    <ResultMain />
   </div>
 </template>
 
@@ -10,13 +9,11 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
   components: {
-    Main: () => import("~/components/Main.vue"),
-    Search: () => import("~/components/Search.vue")
+    ResultMain: () => import("~/components/ResultMain.vue")
   }
 })
-export default class Home extends Vue {}
+export default class Result extends Vue {}
 </script>
 
 <style lang="scss" scoped>
 </style>
-
