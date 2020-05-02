@@ -49,7 +49,6 @@ export default class Area extends Vue {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  background-color: #effffb;
   width: 100%;
   &__title {
     font-size: 20px;
