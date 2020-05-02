@@ -1,6 +1,6 @@
 <template>
-  <div class="goods-type">
-    <h1 class="goods-type__title">種類</h1>
+  <div class="category">
+    <h1 class="category__title">種類</h1>
   </div>
 </template>
 
@@ -8,11 +8,11 @@
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
-export default class GoodsType extends Vue {}
+export default class Category extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.goods-type {
+.category {
   display: flex;
   flex-direction: column;
   align-items: center;
