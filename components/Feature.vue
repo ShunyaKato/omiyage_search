@@ -1,17 +1,17 @@
 <template>
-  <div class="characteristic">
-    <h1 class="characteristic__title">こだわり</h1>
+  <div class="feature">
+    <h1 class="feature__title">こだわり</h1>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
-export default class Characteristic extends Vue {}
+export default class Feature extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.characteristic {
+.feature {
   display: flex;
   flex-direction: column;
   align-items: center;
