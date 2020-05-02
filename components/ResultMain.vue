@@ -16,7 +16,7 @@
           <img class="result-main__wrap__contents__link__image" />
         </a>
         <p class="result-main__wrap__contents__name">表品名</p>
-        <p class="result-main__wrap__contents__cost">コスト</p>
+        <p class="result-main__wrap__contents__price">コスト</p>
         <div class="result-main__wrap__contents__tags">
           <div class="result-main__wrap__contents__tags__tag">タグ</div>
         </div>
@@ -85,7 +85,7 @@ export default class ResultMain extends Vue {}
         margin: 10px 0 3px;
         font-size: 20px;
       }
-      &__cost {
+      &__price {
         font-size: 18px;
         margin-bottom: 3px;
       }
