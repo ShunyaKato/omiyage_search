@@ -19,3 +19,4 @@ export default class Home extends Vue {}
 
 <style lang="scss" scoped>
 </style>
+
