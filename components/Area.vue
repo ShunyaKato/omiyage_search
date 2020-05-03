@@ -10,7 +10,7 @@
           :value="{selectId: key}"
         >{{area.name}}</option>
       </select>
-      <div class="area__wrap__prefecture">
+      <div class="area__wrap__prefecture" v-if="selected.selectId !== '2'">
         <div
           class="area__wrap__prefecture__content"
           v-for="(prefecture, index) in areaData[selected.selectId].prefectures"
