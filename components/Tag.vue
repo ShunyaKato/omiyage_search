@@ -19,7 +19,11 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "nuxt-property-decorator";
 import _ from "lodash";
-import { getPrefectureTag } from "~/modules/index.ts";
+import {
+  getPrefectureTag,
+  getCategoryTag,
+  getFeatureTag
+} from "~/modules/index.ts";
 
 @Component
 export default class Tag extends Vue {
@@ -35,23 +39,11 @@ export default class Tag extends Vue {
   }
 
   getCategoryTag(categoryId: number) {
-    const category: { categoryId: number; name: string }[] = _.filter(
-      this.$store.state.categoryData,
-      {
-        categoryId: categoryId
-      }
-    );
-    return category[0].name;
+    return getCategoryTag(this.$store.state.categoryData, categoryId);
   }
 
   getFeatureTag(featureId: number) {
-    const feature: { featureId: number; name: string }[] = _.filter(
-      this.$store.state.featureData,
-      {
-        featureId: featureId
-      }
-    );
-    return feature[0].name;
+    return getFeatureTag(this.$store.state.featureData, featureId);
   }
 }
 </script>
