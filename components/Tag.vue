@@ -1,17 +1,17 @@
 <template>
   <div class="tag">
-    <p>{{index}}</p>
     <div class="tag__wrap">
-      <p class="tag__wrap__prefecture">{{itemData[index].prefectureId}}</p>
-      <p>{{getPrefectureTag(itemData[index].prefectureId)}}</p>
+      <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[index].prefectureId)}}</p>
       <p
+        class="tag__wrap__category tag__icon"
         v-for="(categoryId, index) in itemData[index].categoryIds"
         :key="index"
-      >{{getCategoryTag(categoryId)}}</p>
+      >#{{getCategoryTag(categoryId)}}</p>
       <p
+        class="tag__wrap__feature tag__icon"
         v-for="(featureId, index) in itemData[index].featureIds"
         :key="index"
-      >{{getFeatureTag(featureId)}}</p>
+      >#{{getFeatureTag(featureId)}}</p>
     </div>
   </div>
 </template>
@@ -67,6 +67,16 @@ export default class Tag extends Vue {
 
 <style lang="scss" scoped>
 .tag {
-  font-size: 100px;
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__icon {
+    background-color: #4f98ca;
+    border-radius: 15px;
+    padding: 0 5px;
+    margin: 3px 5px 3px 0;
+    color: #ffffff;
+  }
 }
 </style>
