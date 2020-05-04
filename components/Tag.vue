@@ -5,12 +5,12 @@
       <p
         class="tag__wrap__category tag__icon"
         v-for="(categoryId, index) in itemData[index].categoryIds"
-        :key="index"
+        :key="`first-${index}`"
       >#{{getCategoryTag(categoryId)}}</p>
       <p
         class="tag__wrap__feature tag__icon"
         v-for="(featureId, index) in itemData[index].featureIds"
-        :key="index"
+        :key="`second-${index}`"
       >#{{getFeatureTag(featureId)}}</p>
     </div>
   </div>
@@ -19,6 +19,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "nuxt-property-decorator";
 import _ from "lodash";
+import { getPrefectureTag } from "~/modules/index.ts";
 
 @Component
 export default class Tag extends Vue {
@@ -29,18 +30,8 @@ export default class Tag extends Vue {
     return this.$store.state.itemData;
   }
 
-  get areaData() {
-    return this.$store.state.areaData;
-  }
-
   getPrefectureTag(prefectureId: number) {
-    const prefecture: { name: string; prefectureId: number }[] = _.filter(
-      this.$store.state.prefectureData,
-      {
-        prefectureId: prefectureId
-      }
-    );
-    return prefecture[0].name;
+    return getPrefectureTag(this.$store.state.prefectureData, prefectureId);
   }
 
   getCategoryTag(categoryId: number) {
