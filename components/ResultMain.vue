@@ -11,14 +11,14 @@
       <p class="result-main__counts__text">ヒット数</p>
     </div>
     <div class="result-main__wrap">
-      <div class="result-main__wrap__contents">
-        <a class="result-main__wrap__contents__link">
-          <img class="result-main__wrap__contents__link__image" />
+      <div class="result-main__wrap__content">
+        <a class="result-main__wrap__content__link">
+          <img class="result-main__wrap__content__link__image" />
         </a>
-        <p class="result-main__wrap__contents__name">表品名</p>
-        <p class="result-main__wrap__contents__price">コスト</p>
-        <div class="result-main__wrap__contents__tags">
-          <div class="result-main__wrap__contents__tags__tag">タグ</div>
+        <p class="result-main__wrap__content__name">表品名</p>
+        <p class="result-main__wrap__content__price">コスト</p>
+        <div class="result-main__wrap__content__tags">
+          <div class="result-main__wrap__content__tags__tag">タグ</div>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@ export default class ResultMain extends Vue {}
   }
   &__wrap {
     margin: 20px 0;
-    &__contents {
+    &__content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
