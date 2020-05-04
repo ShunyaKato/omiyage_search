@@ -42,6 +42,7 @@ export const state = () => ({
       check: false,
       prefectures: [
         {
+          name: '北海道',
           prefectureId: 1
         }
       ]
@@ -279,6 +280,196 @@ export const state = () => ({
       check: false
     }
   },
+  prefectureData: [
+    {
+      name: '北海道',
+      prefectureId: 1
+    },
+    {
+      name: '青森',
+      prefectureId: 2
+    },
+    {
+      name: '岩手',
+      prefectureId: 3
+    },
+    {
+      name: '秋田',
+      prefectureId: 4
+    },
+    {
+      name: '宮城',
+      prefectureId: 5
+    },
+    {
+      name: '山形',
+      prefectureId: 6
+    },
+    {
+      name: '福島',
+      prefectureId: 7
+    },
+    {
+      name: '茨城',
+      prefectureId: 8
+    },
+    {
+      name: '栃木',
+      prefectureId: 9
+    },
+    {
+      name: '群馬',
+      prefectureId: 10
+    },
+    {
+      name: '埼玉',
+      prefectureId: 11
+    },
+    {
+      name: '千葉',
+      prefectureId: 12
+    },
+    {
+      name: '東京',
+      prefectureId: 13
+    },
+    {
+      name: '神奈川',
+      prefectureId: 14
+    },
+    {
+      name: '山梨',
+      prefectureId: 15
+    },
+    {
+      name: '長野',
+      prefectureId: 16
+    },
+    {
+      name: '新潟',
+      prefectureId: 17
+    },
+    {
+      name: '富山',
+      prefectureId: 18
+    },
+    {
+      name: '石川',
+      prefectureId: 19
+    },
+    {
+      name: '福井',
+      prefectureId: 20
+    },
+    {
+      name: '静岡',
+      prefectureId: 21
+    },
+    {
+      name: '愛知',
+      prefectureId: 22
+    },
+    {
+      name: '岐阜',
+      prefectureId: 23
+    },
+    {
+      name: '三重',
+      prefectureId: 24
+    },
+    {
+      name: '滋賀',
+      prefectureId: 25
+    },
+    {
+      name: '京都',
+      prefectureId: 26
+    },
+    {
+      name: '大阪',
+      prefectureId: 27
+    },
+    {
+      name: '兵庫',
+      prefectureId: 28
+    },
+    {
+      name: '奈良',
+      prefectureId: 29
+    },
+    {
+      name: '和歌山',
+      prefectureId: 30
+    },
+    {
+      name: '鳥取',
+      prefectureId: 31
+    },
+    {
+      name: '島根',
+      prefectureId: 32
+    },
+    {
+      name: '岡山',
+      prefectureId: 33
+    },
+    {
+      name: '広島',
+      prefectureId: 34
+    },
+    {
+      name: '山口',
+      prefectureId: 35
+    },
+    {
+      name: '香川',
+      prefectureId: 36
+    },
+    {
+      name: '愛媛',
+      prefectureId: 37
+    },
+    {
+      name: '徳島',
+      prefectureId: 38
+    },
+    {
+      name: '高知',
+      prefectureId: 39
+    },
+    {
+      name: '福岡',
+      prefectureId: 40
+    },
+    {
+      name: '佐賀',
+      prefectureId: 41
+    },
+    {
+      name: '長崎',
+      prefectureId: 42
+    },
+    {
+      name: '熊本',
+      prefectureId: 43
+    },
+    {
+      name: '大分',
+      prefectureId: 44
+    },
+    {
+      name: '宮崎',
+      prefectureId: 45
+    },
+    {
+      name: '鹿児島',
+      prefectureId: 46
+    },
+    {
+      name: '沖縄',
+      prefectureId: 47
+    },
+  ],
   featureData: [
     {
       featureId: 1,

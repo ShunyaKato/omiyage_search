@@ -8,6 +8,7 @@
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
         <p class="recommend__wrap__content__price">{{itemData.price}}</p>
+        <Tag :index="index" />
       </div>
     </div>
   </div>
@@ -16,7 +17,11 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
-@Component
+@Component({
+  components: {
+    Tag: () => import("~/components/Tag.vue")
+  }
+})
 export default class Recommend extends Vue {
   get itemData() {
     return this.$store.state.itemData;
