@@ -3,11 +3,15 @@
     <p>{{index}}</p>
     <div class="tag__wrap">
       <p class="tag__wrap__prefecture">{{itemData[index].prefectureId}}</p>
-      <p>{{getPrefecture(itemData[index].prefectureId)}}</p>
+      <p>{{getPrefectureTag(itemData[index].prefectureId)}}</p>
       <p
         v-for="(categoryId, index) in itemData[index].categoryIds"
         :key="index"
-      >{{getCategory(categoryId)}}</p>
+      >{{getCategoryTag(categoryId)}}</p>
+      <p
+        v-for="(featureId, index) in itemData[index].featureIds"
+        :key="index"
+      >{{getFeatureTag(featureId)}}</p>
     </div>
   </div>
 </template>
@@ -29,7 +33,7 @@ export default class Tag extends Vue {
     return this.$store.state.areaData;
   }
 
-  getPrefecture(prefectureId: number) {
+  getPrefectureTag(prefectureId: number) {
     const prefecture: { name: string; prefectureId: number }[] = _.filter(
       this.$store.state.prefectureData,
       {
@@ -39,7 +43,7 @@ export default class Tag extends Vue {
     return prefecture[0].name;
   }
 
-  getCategory(categoryId: number) {
+  getCategoryTag(categoryId: number) {
     const category: { categoryId: number; name: string }[] = _.filter(
       this.$store.state.categoryData,
       {
@@ -47,6 +51,16 @@ export default class Tag extends Vue {
       }
     );
     return category[0].name;
+  }
+
+  getFeatureTag(featureId: number) {
+    const feature: { featureId: number; name: string }[] = _.filter(
+      this.$store.state.featureData,
+      {
+        featureId: featureId
+      }
+    );
+    return feature[0].name;
   }
 }
 </script>
