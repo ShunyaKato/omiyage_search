@@ -37,9 +37,7 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
-@Component({
-  components: {}
-})
+@Component
 export default class ResultMain extends Vue {}
 </script>
 
