@@ -34,7 +34,7 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
-@Component({})
+@Component
 export default class Area extends Vue {
   get areaData() {
     return this.$store.state.areaData;
@@ -69,9 +69,9 @@ export default class Area extends Vue {
       &__content {
         display: flex;
         align-items: center;
-        margin: 0 10px;
+        margin: 0 5px;
         &__checkbox {
-          margin-right: 5px;
+          margin-right: 3px;
         }
       }
     }
