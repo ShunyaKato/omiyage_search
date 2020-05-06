@@ -20,6 +20,7 @@
             class="area__wrap__prefecture__content__checkbox"
             type="checkbox"
             :id="prefecture.prefectureId"
+            @change="updatePrefectureParams(prefecture.prefectureId)"
           />
           <label
             class="area__wrap__prefecture__content__label"
@@ -39,7 +40,12 @@ export default class Area extends Vue {
   get areaData() {
     return this.$store.state.areaData;
   }
+
   selected = { selectId: 0 };
+
+  updatePrefectureParams(prefectureId: number) {
+    this.$store.dispatch("updatePrefectureParams", prefectureId);
+  }
 }
 </script>
 

@@ -536,10 +536,11 @@ export const mutations = {
 
 export const actions = {
   updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
-    if (state.searchParams.prefectures.include(prefectureId)) {
-      state.commit('deletePrefectureParams', prefectureId)
+    console.log('run update prefecture')
+    if (state.searchParams.prefectures.includes(prefectureId)) {
+      commit('deletePrefectureParams', prefectureId)
     } else {
-      state.commit('setPrefectureParams', prefectureId)
+      commit('setPrefectureParams', prefectureId)
     }
   }
 }
