@@ -531,7 +531,19 @@ export const mutations = {
     _.pull(state.searchParams.prefectures, prefectureId);
     console.log("---setPrefecture---");
     console.log(state.searchParams.prefectures);
-  }
+  },
+  setCategoryParams(state: any, categoryId: number) {
+    console.log('run set category');
+    state.searchParams.categoryIds.push(categoryId);
+    console.log("---setcategory---");
+    console.log(state.searchParams.categoryIds);
+  },
+  deleteCategoryParams(state: any, categoryId: number) {
+    console.log('run delete category');
+    _.pull(state.searchParams.categoryIds, categoryId);
+    console.log("---setcategory---");
+    console.log(state.searchParams.categoryIds);
+  },
 }
 
 export const actions = {
@@ -542,5 +554,13 @@ export const actions = {
     } else {
       commit('setPrefectureParams', prefectureId)
     }
-  }
+  },
+  updateCategoryParams({ state, commit }: { state: any, commit: any }, categoryId: number) {
+    console.log('run update category')
+    if (state.searchParams.categoryIds.includes(categoryId)) {
+      commit('deleteCategoryParams', categoryId)
+    } else {
+      commit('setCategoryParams', categoryId)
+    }
+  },
 }
