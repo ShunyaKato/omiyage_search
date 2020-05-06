@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "nuxt-property-decorator";
-import _ from "lodash";
+// import _ from "lodash";
 import {
   getPrefectureTag,
   getCategoryTag,

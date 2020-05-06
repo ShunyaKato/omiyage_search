@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 export const state = () => ({
   itemData: [
     {
@@ -505,5 +507,40 @@ export const state = () => ({
       categoryId: 4,
       name: "調味料"
     },
-  ]
+  ],
+  searchParams: {
+    prefectures: [],
+    categoryIds: [],
+    featureIds: [],
+  } = {
+    prefectures: [],
+    categoryIds: [],
+    featureIds: [],
+  }
 })
+
+export const mutations = {
+  setPrefectureParams(state: any, prefectureId: number) {
+    console.log('run set prefecture');
+    state.searchParams.prefectures.push(prefectureId);
+    console.log("---setPrefecture---");
+    console.log(state.searchParams.prefectures);
+  },
+  deletePrefectureParams(state: any, prefectureId: number) {
+    console.log('run delete prefecture');
+    _.pull(state.searchParams.prefectures, prefectureId);
+    console.log("---setPrefecture---");
+    console.log(state.searchParams.prefectures);
+  }
+}
+
+export const actions = {
+  updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
+    console.log('run update prefecture')
+    if (state.searchParams.prefectures.includes(prefectureId)) {
+      commit('deletePrefectureParams', prefectureId)
+    } else {
+      commit('setPrefectureParams', prefectureId)
+    }
+  }
+}
