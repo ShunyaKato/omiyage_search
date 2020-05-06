@@ -3,7 +3,12 @@
     <h1 class="feature__title">こだわり</h1>
     <div class="feature__wrap">
       <div class="feature__wrap__content" v-for="(feature, index) in featureData" :key="index">
-        <input class="feature__wrap__content__checkbox" type="checkbox" :id="feature.featureId" />
+        <input
+          class="feature__wrap__content__checkbox"
+          type="checkbox"
+          :id="feature.featureId"
+          @change="updateFeatureParams(feature.featureId)"
+        />
         <label class="feature__wrap__content__label" :for="feature.featureId">{{feature.name}}</label>
       </div>
     </div>
@@ -16,6 +21,10 @@ import { Component, Vue } from "nuxt-property-decorator";
 export default class Feature extends Vue {
   get featureData() {
     return this.$store.state.featureData;
+  }
+
+  updateFeatureParams(featureId: number) {
+    this.$store.dispatch("updateCategoryParams", featureId);
   }
 }
 </script>
