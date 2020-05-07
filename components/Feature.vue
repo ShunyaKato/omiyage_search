@@ -1,17 +1,21 @@
 <template>
   <div class="feature">
     <h1 class="feature__title">こだわり</h1>
-    <div class="feature__wrap">
+    <form class="feature__wrap">
       <div class="feature__wrap__content" v-for="(feature, index) in featureData" :key="index">
         <input
+          name="feature"
           class="feature__wrap__content__checkbox"
           type="checkbox"
-          :id="feature.featureId"
+          :id="`featureIds:${feature.featureId}`"
           @change="updateFeatureParams(feature.featureId)"
         />
-        <label class="feature__wrap__content__label" :for="feature.featureId">{{feature.name}}</label>
+        <label
+          class="feature__wrap__content__label"
+          :for="`featureIds:${feature.featureId}`"
+        >{{feature.name}}</label>
       </div>
-    </div>
+    </form>
   </div>
 </template>
 <script lang="ts">
@@ -24,7 +28,7 @@ export default class Feature extends Vue {
   }
 
   updateFeatureParams(featureId: number) {
-    this.$store.dispatch("updateCategoryParams", featureId);
+    this.$store.dispatch("updateFeatureParams", featureId);
   }
 }
 </script>
