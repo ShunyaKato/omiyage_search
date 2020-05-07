@@ -17,14 +17,15 @@
           :key="index"
         >
           <input
+            name="prefecture"
             class="area__wrap__prefecture__content__checkbox"
             type="checkbox"
-            :id="prefecture.prefectureId"
+            :id="`prefectureIds:${prefecture.prefectureId}`"
             @change="updatePrefectureParams(prefecture.prefectureId)"
           />
           <label
             class="area__wrap__prefecture__content__label"
-            :for="prefecture.prefectureId"
+            :for="`prefectureIds:${prefecture.prefectureId}`"
           >{{prefecture.name}}</label>
         </div>
       </div>

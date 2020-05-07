@@ -1,17 +1,21 @@
 <template>
   <div class="category">
     <h1 class="category__title">種類</h1>
-    <div class="category__wrap">
+    <form class="category__wrap">
       <div class="category__wrap__content" v-for="(category, index) in categoryData" :key="index">
         <input
+          name="category"
           class="category__wrap__content__checkbox"
           type="checkbox"
-          :id="category.categoryId"
+          :id="`categoryIds:${category.categoryId}`"
           @change="updateCategoryParams(category.categoryId)"
         />
-        <label class="category__wrap__content__label" :for="category.categoryId">{{category.name}}</label>
+        <label
+          class="category__wrap__content__label"
+          :for="`categoryIds:${category.categoryId}`"
+        >{{category.name}}</label>
       </div>
-    </div>
+    </form>
   </div>
 </template>
 
