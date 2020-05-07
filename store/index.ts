@@ -521,34 +521,27 @@ export const state = () => ({
 
 export const mutations = {
   setPrefectureParams(state: any, prefectureId: number) {
-    console.log('run set prefecture');
     state.searchParams.prefectures.push(prefectureId);
-    console.log("---setPrefecture---");
-    console.log(state.searchParams.prefectures);
   },
   deletePrefectureParams(state: any, prefectureId: number) {
-    console.log('run delete prefecture');
     _.pull(state.searchParams.prefectures, prefectureId);
-    console.log("---setPrefecture---");
-    console.log(state.searchParams.prefectures);
   },
   setCategoryParams(state: any, categoryId: number) {
-    console.log('run set category');
     state.searchParams.categoryIds.push(categoryId);
-    console.log("---setcategory---");
-    console.log(state.searchParams.categoryIds);
   },
   deleteCategoryParams(state: any, categoryId: number) {
-    console.log('run delete category');
     _.pull(state.searchParams.categoryIds, categoryId);
-    console.log("---setcategory---");
-    console.log(state.searchParams.categoryIds);
+  },
+  setFeatureParams(state: any, featureId: number) {
+    state.searchParams.featureIds.push(featureId);
+  },
+  deleteFeatureParams(state: any, featureId: number) {
+    _.pull(state.searchParams.featureIds, featureId);
   },
 }
 
 export const actions = {
   updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
-    console.log('run update prefecture')
     if (state.searchParams.prefectures.includes(prefectureId)) {
       commit('deletePrefectureParams', prefectureId)
     } else {
@@ -556,11 +549,17 @@ export const actions = {
     }
   },
   updateCategoryParams({ state, commit }: { state: any, commit: any }, categoryId: number) {
-    console.log('run update category')
     if (state.searchParams.categoryIds.includes(categoryId)) {
       commit('deleteCategoryParams', categoryId)
     } else {
       commit('setCategoryParams', categoryId)
+    }
+  },
+  updateFeatureParams({ state, commit }: { state: any, commit: any }, featureId: number) {
+    if (state.searchParams.featureIds.includes(featureId)) {
+      commit('deleteFeatureParams', featureId)
+    } else {
+      commit('setFeatureParams', featureId)
     }
   },
 }
