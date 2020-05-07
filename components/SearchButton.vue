@@ -1,6 +1,8 @@
 <template>
   <div class="search-button">
-    <nuxt-link :to="{path: 'result', query: {prefectures: prefectureParams}}">
+    <nuxt-link
+      :to="{path: 'result', query: {prefectures: prefectureParams, categoryIds: categoryParams}}"
+    >
       <button>検索</button>
     </nuxt-link>
   </div>
@@ -16,6 +18,10 @@ export default class SearchBotton extends Vue {
 
   get prefectureParams() {
     return this.searchParams.prefectures.toString();
+  }
+
+  get categoryParams() {
+    return this.searchParams.categoryIds.toString();
   }
 }
 </script>
