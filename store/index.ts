@@ -538,6 +538,9 @@ export const mutations = {
   deleteFeatureParams(state: any, featureId: number) {
     _.pull(state.searchParams.featureIds, featureId);
   },
+  clearSearchParams(state: any, keyName: string) {
+    state.searchParams[keyName] = []
+  }
 }
 
 export const actions = {
