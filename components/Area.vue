@@ -1,6 +1,7 @@
 <template>
   <div class="area">
     <h1 class="area__title">エリア選択</h1>
+    <ClearButton :keyName="'prefectures'" />
     <div class="area__wrap">
       <select class="area__wrap__region" v-model="selected">
         <option
@@ -22,6 +23,7 @@
             type="checkbox"
             :id="`prefectureIds:${prefecture.prefectureId}`"
             @change="updatePrefectureParams(prefecture.prefectureId)"
+            :checked="isChecked(prefecture.prefectureId)"
           />
           <label
             class="area__wrap__prefecture__content__label"
@@ -36,10 +38,20 @@
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
 
-@Component
+@Component({
+  components: {
+    ClearButton: () => import("~/components/ClearButton.vue")
+  }
+})
 export default class Area extends Vue {
   get areaData() {
     return this.$store.state.areaData;
+  }
+
+  isChecked(prefectureId: number) {
+    if (this.$store.state.searchParams.prefectures.includes(prefectureId)) {
+      return "checked";
+    }
   }
 
   selected = { selectId: 0 };
