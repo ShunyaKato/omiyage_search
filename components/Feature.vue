@@ -2,7 +2,7 @@
   <div class="feature">
     <h1 class="feature__title">こだわり</h1>
     <ClearButton :keyName="'featureIds'" />
-    <form class="feature__wrap">
+    <div class="feature__wrap">
       <div class="feature__wrap__content" v-for="(feature, index) in featureData" :key="index">
         <input
           name="feature"
@@ -17,7 +17,7 @@
           :for="`featureIds:${feature.featureId}`"
         >{{feature.name}}</label>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 <script lang="ts">

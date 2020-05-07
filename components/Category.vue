@@ -2,7 +2,7 @@
   <div class="category">
     <h1 class="category__title">種類</h1>
     <ClearButton :keyName="'categoryIds'" />
-    <form class="category__wrap">
+    <div class="category__wrap">
       <div class="category__wrap__content" v-for="(category, index) in categoryData" :key="index">
         <input
           name="category"
@@ -17,7 +17,7 @@
           :for="`categoryIds:${category.categoryId}`"
         >{{category.name}}</label>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 
