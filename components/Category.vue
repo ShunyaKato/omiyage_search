@@ -3,7 +3,12 @@
     <h1 class="category__title">種類</h1>
     <div class="category__wrap">
       <div class="category__wrap__content" v-for="(category, index) in categoryData" :key="index">
-        <input class="category__wrap__content__checkbox" type="checkbox" :id="category.categoryId" />
+        <input
+          class="category__wrap__content__checkbox"
+          type="checkbox"
+          :id="category.categoryId"
+          @change="updateCategoryParams(category.categoryId)"
+        />
         <label class="category__wrap__content__label" :for="category.categoryId">{{category.name}}</label>
       </div>
     </div>
@@ -17,6 +22,10 @@ import { Component, Vue } from "nuxt-property-decorator";
 export default class Category extends Vue {
   get categoryData() {
     return this.$store.state.categoryData;
+  }
+
+  updateCategoryParams(categoryId: number) {
+    this.$store.dispatch("updateCategoryParams", categoryId);
   }
 }
 </script>
