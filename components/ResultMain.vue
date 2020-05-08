@@ -6,17 +6,17 @@
       <ul class="result-main__conditions__lists">
         <li
           class="result-main__conditions__lists__list"
-          v-for="(prefectureId, index) in setPrefectureArray()"
+          v-for="(prefectureId, index) in setPrefectureArray"
           :key="`prefecture-${index}`"
         >{{getPrefectureTag(prefectureId)}}</li>
         <li
           class="result-main__conditions__lists__list"
-          v-for="(categoryId, index) in setCategoryArray()"
+          v-for="(categoryId, index) in setCategoryArray"
           :key="`category-${index}`"
         >{{getCategoryTag(categoryId)}}</li>
         <li
           class="result-main__conditions__lists__list"
-          v-for="(featureId, index) in setFeatureArray()"
+          v-for="(featureId, index) in setFeatureArray"
           :key="`feature-${index}`"
         >{{getFeatureTag(featureId)}}</li>
       </ul>
@@ -63,7 +63,7 @@ import _ from "lodash";
 
 @Component
 export default class ResultMain extends Vue {
-  setPrefectureArray(): number[] {
+  get setPrefectureArray(): number[] {
     let prefectureArray: number[] = [];
     if (typeof this.$route.query.prefectures === "string") {
       prefectureArray = this.$route.query.prefectures.split(",").map(Number);
@@ -71,7 +71,7 @@ export default class ResultMain extends Vue {
     return prefectureArray;
   }
 
-  setCategoryArray(): number[] {
+  get setCategoryArray(): number[] {
     let categoryArray: number[] = [];
     if (typeof this.$route.query.categoryIds === "string") {
       categoryArray = this.$route.query.categoryIds.split(",").map(Number);
@@ -79,7 +79,7 @@ export default class ResultMain extends Vue {
     return categoryArray;
   }
 
-  setFeatureArray(): number[] {
+  get setFeatureArray(): number[] {
     let featureArray: number[] = [];
     if (typeof this.$route.query.featureIds === "string") {
       featureArray = this.$route.query.featureIds.split(",").map(Number);
@@ -91,11 +91,11 @@ export default class ResultMain extends Vue {
     let resultItem = [];
     resultItem = _.filter(this.$store.state.itemData, item => {
       // prefectureArrayがない時は全てreturn
-      if (this.setPrefectureArray().length === 0) {
+      if (this.setPrefectureArray.length === 0) {
         return item;
       }
       let isMach = false; // setPrefectureArrayがitem.prefectureIdsに含まれるかどうか
-      if (this.setPrefectureArray().includes(item.prefectureId) === true) {
+      if (this.setPrefectureArray.includes(item.prefectureId) === true) {
         isMach = true;
       }
       if (isMach) {
@@ -104,11 +104,11 @@ export default class ResultMain extends Vue {
     });
     resultItem = _.filter(resultItem, item => {
       // categoryArrayがない時は全てreturn
-      if (this.setCategoryArray().length === 0) {
+      if (this.setCategoryArray.length === 0) {
         return item;
       }
       let isMach = false; // setCategoryArrayがitem.categoryIdsに含まれるかどうか
-      _.each(this.setCategoryArray(), categoryId => {
+      _.each(this.setCategoryArray, categoryId => {
         if (item.categoryIds.includes(categoryId) === true) {
           isMach = true;
         }
@@ -119,11 +119,11 @@ export default class ResultMain extends Vue {
     });
     resultItem = _.filter(resultItem, item => {
       // featureArrayがない時は全てreturn
-      if (this.setFeatureArray().length === 0) {
+      if (this.setFeatureArray.length === 0) {
         return item;
       }
       let isMach = false; // setFeatureArrayがitem.featureIdsに含まれるかどうか
-      _.each(this.setFeatureArray(), featureId => {
+      _.each(this.setFeatureArray, featureId => {
         if (item.featureIds.includes(featureId) === true) {
           isMach = true;
         }
