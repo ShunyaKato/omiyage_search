@@ -16,8 +16,8 @@ export default class SearchBotton extends Vue {
     return this.$store.state.searchParams;
   }
 
-  get prefectureParams() {
-    return this.searchParams.prefectures.toString();
+  get prefectureParams(): string {
+    return this.searchParams.prefectures;
   }
 
   get categoryParams() {

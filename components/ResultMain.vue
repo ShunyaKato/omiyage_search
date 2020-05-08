@@ -4,7 +4,11 @@
     <div class="result-main__conditions">
       <p class="result-main__conditions__text">検索条件</p>
       <ul class="result-main__conditions__lists">
-        <li class="result-main__conditions__lists__list"></li>
+        <li
+          class="result-main__conditions__lists__prefecture"
+          v-for="(prefectureId, index) in this.$route.query.prefectures"
+          :key="index"
+        >{{getPrefectureTag(prefectureId)}}</li>
       </ul>
     </div>
     <div class="result-main__counts">
@@ -36,9 +40,22 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import {
+  getPrefectureTag,
+  getCategoryTag,
+  getFeatureTag
+} from "~/modules/index.ts";
 
 @Component
-export default class ResultMain extends Vue {}
+export default class ResultMain extends Vue {
+  get prefectureData() {
+    return this.$store.state.prefectureData;
+  }
+
+  getPrefectureTag(prefectureId: number) {
+    return getPrefectureTag(this.$store.state.prefectureData, prefectureId);
+  }
+}
 </script>
 
 <style lang="scss" scoped>
