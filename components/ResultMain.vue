@@ -94,11 +94,8 @@ export default class ResultMain extends Vue {
       if (this.setPrefectureArray.length === 0) {
         return item;
       }
-      let isMach = false; // setPrefectureArrayがitem.prefectureIdsに含まれるかどうか
+      // setPrefectureArrayがitem.prefectureIdsに含まれるかどうか
       if (this.setPrefectureArray.includes(item.prefectureId) === true) {
-        isMach = true;
-      }
-      if (isMach) {
         return item;
       }
     });
