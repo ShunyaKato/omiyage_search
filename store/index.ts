@@ -576,6 +576,5 @@ export const actions = {
     } else {
       commit('setFeatureParams', featureId)
     }
-    console.log(state.searchParams.featureIds)
   },
 }

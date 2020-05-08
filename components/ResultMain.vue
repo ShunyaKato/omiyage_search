@@ -22,6 +22,7 @@
       </ul>
     </div>
     <div class="result-main__counts">
+      <div>{{resultItem}}</div>
       <p class="result-main__counts__text">ヒット数</p>
     </div>
     <div class="result-main__wrap">
@@ -55,31 +56,80 @@ import {
   getCategoryTag,
   getFeatureTag
 } from "~/modules/index.ts";
+import _ from "lodash";
 
 @Component
 export default class ResultMain extends Vue {
-  setPrefectureArray() {
+  setPrefectureArray(): number[] {
     let prefectureArray: number[] = [];
     if (typeof this.$route.query.prefectures === "string") {
       prefectureArray = this.$route.query.prefectures.split(",").map(Number);
-      return prefectureArray;
     }
+    return prefectureArray;
   }
 
-  setCategoryArray() {
+  setCategoryArray(): number[] {
     let categoryArray: number[] = [];
     if (typeof this.$route.query.categoryIds === "string") {
       categoryArray = this.$route.query.categoryIds.split(",").map(Number);
-      return categoryArray;
     }
+    return categoryArray;
   }
 
-  setFeatureArray() {
+  setFeatureArray(): number[] {
     let featureArray: number[] = [];
     if (typeof this.$route.query.featureIds === "string") {
       featureArray = this.$route.query.featureIds.split(",").map(Number);
-      return featureArray;
     }
+    return featureArray;
+  }
+
+  get resultItem() {
+    let resultItem = [];
+    resultItem = _.filter(this.$store.state.itemData, item => {
+      // prefectureArrayがない時は全てreturn
+      if (this.setPrefectureArray().length === 0) {
+        return item;
+      }
+      let isMach = false; // setPrefectureArrayがitem.prefectureIdsに含まれるかどうか
+      if (this.setPrefectureArray().includes(item.prefectureId) === true) {
+        isMach = true;
+      }
+      if (isMach) {
+        return item;
+      }
+    });
+    resultItem = _.filter(resultItem, item => {
+      // categoryArrayがない時は全てreturn
+      if (this.setCategoryArray().length === 0) {
+        return item;
+      }
+      let isMach = false; // setCategoryArrayがitem.categoryIdsに含まれるかどうか
+      _.each(this.setCategoryArray(), categoryId => {
+        if (item.categoryIds.includes(categoryId) === true) {
+          isMach = true;
+        }
+      });
+      if (isMach) {
+        return item;
+      }
+    });
+    resultItem = _.filter(resultItem, item => {
+      // featureArrayがない時は全てreturn
+      if (this.setFeatureArray().length === 0) {
+        return item;
+      }
+      let isMach = false; // setFeatureArrayがitem.featureIdsに含まれるかどうか
+      _.each(this.setFeatureArray(), featureId => {
+        if (item.featureIds.includes(featureId) === true) {
+          isMach = true;
+        }
+      });
+      if (isMach) {
+        return item;
+      }
+    });
+    return resultItem;
   }
 
   getPrefectureTag(prefectureId: number) {
