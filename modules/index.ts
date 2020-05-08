@@ -7,8 +7,8 @@ export const getPrefectureTag = (prefectureData: { name: string, prefectureId: n
       prefectureId: prefectureId
     }
   );
-  console.log(typeof prefectureId)
-  console.log(prefecture[0])
+  // console.log(typeof prefectureId)
+  // console.log(prefecture[0])
   return prefecture[0].name;
 }
 

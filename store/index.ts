@@ -521,22 +521,31 @@ export const state = () => ({
 
 export const mutations = {
   setPrefectureParams(state: any, prefectureId: number) {
-    state.searchParams.prefectures.push(prefectureId);
+    const newPrefectureParams = state.searchParams.prefectures.concat()
+    newPrefectureParams.push(prefectureId)
+    state.searchParams.prefectures = newPrefectureParams
   },
   deletePrefectureParams(state: any, prefectureId: number) {
-    _.pull(state.searchParams.prefectures, prefectureId);
+    const newPrefectureParams = _.pull(state.searchParams.prefectures.concat(), prefectureId)
+    state.searchParams.prefectures = newPrefectureParams
   },
   setCategoryParams(state: any, categoryId: number) {
-    state.searchParams.categoryIds.push(categoryId);
+    const newCategoryParams = state.searchParams.categoryIds.concat()
+    newCategoryParams.push(categoryId)
+    state.searchParams.categoryIds = newCategoryParams
   },
   deleteCategoryParams(state: any, categoryId: number) {
-    _.pull(state.searchParams.categoryIds, categoryId);
+    const newCategoryParams = _.pull(state.searchParams.categoryIds.concat(), categoryId)
+    state.searchParams.categoryIds = newCategoryParams
   },
   setFeatureParams(state: any, featureId: number) {
-    state.searchParams.featureIds.push(featureId);
+    const newFeatureParams = state.searchParams.featureIds.concat()
+    newFeatureParams.push(featureId)
+    state.searchParams.featureIds = newFeatureParams
   },
   deleteFeatureParams(state: any, featureId: number) {
-    _.pull(state.searchParams.featureIds, featureId);
+    const newFeatureParams = _.pull(state.searchParams.featureIds.concat(), featureId)
+    state.searchParams.featureIds = newFeatureParams
   },
   clearSearchParams(state: any, keyName: string) {
     state.searchParams[keyName] = []
@@ -564,5 +573,6 @@ export const actions = {
     } else {
       commit('setFeatureParams', featureId)
     }
+    console.log(state.searchParams.featureIds)
   },
 }
