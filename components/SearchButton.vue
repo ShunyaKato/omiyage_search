@@ -12,20 +12,16 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class SearchBotton extends Vue {
-  get searchParams() {
-    return this.$store.state.searchParams;
-  }
-
   get prefectureParams(): string {
-    return this.searchParams.prefectures;
+    return this.$store.state.searchParams.prefectures.toString();
   }
 
   get categoryParams() {
-    return this.searchParams.categoryIds.toString();
+    return this.$store.state.searchParams.categoryIds.toString();
   }
 
   get featureParams() {
-    return this.searchParams.featureIds.toString();
+    return this.$store.state.searchParams.featureIds.toString();
   }
 }
 </script>

@@ -5,10 +5,20 @@
       <p class="result-main__conditions__text">検索条件</p>
       <ul class="result-main__conditions__lists">
         <li
-          class="result-main__conditions__lists__prefecture"
-          v-for="(prefectureId, index) in this.$route.query.prefectures"
-          :key="index"
+          class="result-main__conditions__lists__list"
+          v-for="(prefectureId, index) in setPrefectureArray()"
+          :key="`prefecture-${index}`"
         >{{getPrefectureTag(prefectureId)}}</li>
+        <li
+          class="result-main__conditions__lists__list"
+          v-for="(categoryId, index) in this.$route.query.categoryIds"
+          :key="`category-${index}`"
+        >{{getCategoryTag(categoryId)}}</li>
+        <li
+          class="result-main__conditions__lists__list"
+          v-for="(featureId, index) in this.$route.query.featureIds"
+          :key="`feature-${index}`"
+        >{{getFeatureTag(featureId)}}</li>
       </ul>
     </div>
     <div class="result-main__counts">
@@ -48,12 +58,24 @@ import {
 
 @Component
 export default class ResultMain extends Vue {
-  get prefectureData() {
-    return this.$store.state.prefectureData;
+  setPrefectureArray() {
+    let prefectureArray: number[];
+    if (typeof this.$route.query.prefectures === "string") {
+      prefectureArray = this.$route.query.prefectures.split(",").map(Number);
+      return prefectureArray;
+    }
   }
 
   getPrefectureTag(prefectureId: number) {
     return getPrefectureTag(this.$store.state.prefectureData, prefectureId);
+  }
+
+  getCategoryTag(categoryId: number) {
+    return getCategoryTag(this.$store.state.categoryData, categoryId);
+  }
+
+  getFeatureTag(featureId: number) {
+    return getFeatureTag(this.$store.state.featureData, featureId);
   }
 }
 </script>
