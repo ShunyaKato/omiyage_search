@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="result-main__counts">
-      <p class="result-main__counts__text">ヒット数{{resultItem.length}}</p>
+      <p class="result-main__counts__text">検索結果{{resultItem.length}}件</p>
     </div>
     <div class="result-main__wrap">
       <div

@@ -523,8 +523,8 @@ export const mutations = {
   setPrefectureParams(state: any, prefectureId: number) {
     const newPrefectureParams = state.searchParams.prefectures.concat()
     newPrefectureParams.push(prefectureId)
-    const isSortedPrefectureParams = _.sortBy(newPrefectureParams)
-    state.searchParams.prefectures = newPrefectureParams
+    const sortedPrefectureParams = _.sortBy(newPrefectureParams)
+    state.searchParams.prefectures = sortedPrefectureParams
   },
   deletePrefectureParams(state: any, prefectureId: number) {
     const newPrefectureParams = _.pull(state.searchParams.prefectures.concat(), prefectureId)
@@ -533,8 +533,8 @@ export const mutations = {
   setCategoryParams(state: any, categoryId: number) {
     const newCategoryParams = state.searchParams.categoryIds.concat()
     newCategoryParams.push(categoryId)
-    const isSortedCategoryParams = _.sortBy(newCategoryParams)
-    state.searchParams.categoryIds = isSortedCategoryParams
+    const sortedCategoryParams = _.sortBy(newCategoryParams)
+    state.searchParams.categoryIds = sortedCategoryParams
   },
   deleteCategoryParams(state: any, categoryId: number) {
     const newCategoryParams = _.pull(state.searchParams.categoryIds.concat(), categoryId)
@@ -543,8 +543,8 @@ export const mutations = {
   setFeatureParams(state: any, featureId: number) {
     const newFeatureParams = state.searchParams.featureIds.concat()
     newFeatureParams.push(featureId)
-    const isSortedFeatureParams = _.sortBy(newFeatureParams)
-    state.searchParams.featureIds = isSortedFeatureParams
+    const sortedFeatureParams = _.sortBy(newFeatureParams)
+    state.searchParams.featureIds = sortedFeatureParams
   },
   deleteFeatureParams(state: any, featureId: number) {
     const newFeatureParams = _.pull(state.searchParams.featureIds.concat(), featureId)

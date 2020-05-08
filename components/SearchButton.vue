@@ -11,11 +11,12 @@ import { Component, Vue } from "nuxt-property-decorator";
 @Component
 export default class SearchBotton extends Vue {
   get setQuery() {
-    let query: {
+    interface queryType {
       prefectures?: string;
       categoryIds?: string;
       featureIds?: string;
-    } = {};
+    }
+    let query: queryType = {};
     if (this.$store.state.searchParams.prefectures.length > 0) {
       query[
         "prefectures"
