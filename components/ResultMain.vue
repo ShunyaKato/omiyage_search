@@ -22,16 +22,19 @@
       </ul>
     </div>
     <div class="result-main__counts">
-      <div>{{resultItem}}</div>
-      <p class="result-main__counts__text">ヒット数</p>
+      <p class="result-main__counts__text">ヒット数{{resultItem.length}}</p>
     </div>
     <div class="result-main__wrap">
-      <div class="result-main__wrap__content">
-        <a class="result-main__wrap__content__link">
-          <img class="result-main__wrap__content__link__image" />
+      <div
+        class="result-main__wrap__content"
+        v-for="(resultItem, index) in resultItem"
+        :key="index"
+      >
+        <a class="result-main__wrap__content__link" :href="resultItem.url">
+          <img class="result-main__wrap__content__link__image" :src="resultItem.image_url" />
         </a>
-        <p class="result-main__wrap__content__name">表品名</p>
-        <p class="result-main__wrap__content__price">コスト</p>
+        <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
+        <p class="result-main__wrap__content__price">{{resultItem.price}}</p>
         <div class="result-main__wrap__content__tags">
           <div class="result-main__wrap__content__tags__tag">タグ</div>
         </div>
@@ -171,12 +174,14 @@ export default class ResultMain extends Vue {
   }
   &__wrap {
     margin: 20px 0;
+    display: flex;
     &__content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      margin: 0 10px;
       &__link {
         &__image {
           width: 300px;
