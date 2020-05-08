@@ -1,5 +1,12 @@
 import _ from "lodash";
 
+interface searchParamsType {
+  region: number,
+  prefectures: [],
+  categoryIds: [],
+  featureIds: [],
+}
+
 export const state = () => ({
   itemData: [
     {
@@ -509,12 +516,7 @@ export const state = () => ({
     },
   ],
   searchParams: {
-    region: [],
-    prefectures: [],
-    categoryIds: [],
-    featureIds: [],
-  } = {
-    region: [],
+    region: 0,
     prefectures: [],
     categoryIds: [],
     featureIds: [],
@@ -523,14 +525,9 @@ export const state = () => ({
 
 export const mutations = {
   setRegionParams(state: any, regionId: number) {
-    const newRegionParams = state.searchParams.region.concat()
-    newRegionParams.push(regionId)
-    state.searchParams.region = newRegionParams
+    state.searchParams.region = regionId
   },
-  deleteRegionParams(state: any, regionId: number) {
-    const newRegionParams = _.pull(state.searchParams.region.concat(), regionId)
-    state.searchParams.region = newRegionParams
-  },
+
   setPrefectureParams(state: any, prefectureId: number) {
     const newPrefectureParams = state.searchParams.prefectures.concat()
     newPrefectureParams.push(prefectureId)
@@ -568,11 +565,7 @@ export const mutations = {
 
 export const actions = {
   updateRegionParams({ state, commit }: { state: any, commit: any }, regionId: number) {
-    if (state.searchParams.region.includes(regionId)) {
-      commit('deleteRegionParams', regionId)
-    } else {
-      commit('setRegionParams', regionId)
-    }
+    commit('setRegionParams', regionId)
   },
   updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
     if (state.searchParams.prefectures.includes(prefectureId)) {
