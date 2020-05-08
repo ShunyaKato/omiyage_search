@@ -1,8 +1,6 @@
 <template>
   <div class="search-button">
-    <nuxt-link
-      :to="{path: 'result', query: {prefectures: prefectureParams, categoryIds: categoryParams, featureIds: featureParams}}"
-    >
+    <nuxt-link :to="{path: 'result', query: setQuery}">
       <button>検索</button>
     </nuxt-link>
   </div>
@@ -12,20 +10,29 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component
 export default class SearchBotton extends Vue {
-  get searchParams() {
-    return this.$store.state.searchParams;
-  }
-
-  get prefectureParams() {
-    return this.searchParams.prefectures.toString();
-  }
-
-  get categoryParams() {
-    return this.searchParams.categoryIds.toString();
-  }
-
-  get featureParams() {
-    return this.searchParams.featureIds.toString();
+  get setQuery() {
+    interface queryType {
+      prefectures?: string;
+      categoryIds?: string;
+      featureIds?: string;
+    }
+    let query: queryType = {};
+    if (this.$store.state.searchParams.prefectures.length > 0) {
+      query[
+        "prefectures"
+      ] = this.$store.state.searchParams.prefectures.toString();
+    }
+    if (this.$store.state.searchParams.categoryIds.length > 0) {
+      query[
+        "categoryIds"
+      ] = this.$store.state.searchParams.categoryIds.toString();
+    }
+    if (this.$store.state.searchParams.featureIds.length > 0) {
+      query[
+        "featureIds"
+      ] = this.$store.state.searchParams.featureIds.toString();
+    }
+    return query;
   }
 }
 </script>
