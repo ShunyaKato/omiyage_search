@@ -90,6 +90,20 @@ export default class ResultMain extends Vue {
   get resultItem() {
     let resultItem = [];
     resultItem = _.filter(this.$store.state.itemData, item => {
+      // regionがない時は全てreturn
+      const regionId = this.$route.query.region;
+      if (!regionId) {
+        return item;
+      }
+      // regionがitem.regionに含まれるかどうか
+      if (
+        typeof regionId === "string" &&
+        parseInt(regionId, 10) === item.region
+      ) {
+        return item;
+      }
+    });
+    resultItem = _.filter(resultItem, item => {
       // prefectureArrayがない時は全てreturn
       if (this.setPrefectureArray.length === 0) {
         return item;
