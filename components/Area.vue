@@ -53,7 +53,7 @@ export default class Area extends Vue {
     return this.$store.state.areaData;
   }
 
-  isSelected(regionId: number) {
+  isSelected(regionId: string) {
     if (this.$store.state.searchParams.region === regionId) {
       return "selected";
     }
@@ -67,7 +67,11 @@ export default class Area extends Vue {
 
   selected = { selectId: this.$store.state.searchParams.region };
 
-  updateRegionParams(regionId: number) {
+  updateRegionParams(regionId: string) {
+    //全国を選択した場合チェックをクリアにする
+    if (regionId === "1") {
+      this.$store.commit("clearSearchParams", "prefectures");
+    }
     this.$store.dispatch("updateRegionParams", regionId);
     console.log(this.$store.state.searchParams.region);
   }
