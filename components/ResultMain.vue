@@ -10,7 +10,7 @@
         >全国</li>
         <li
           class="result-main__conditions__lists__list"
-          v-if="!$route.query.prefectures"
+          v-if="$route.query.region && !$route.query.prefectures"
         >{{regionName($route.query.region)}}</li>
         <li
           class="result-main__conditions__lists__list"
