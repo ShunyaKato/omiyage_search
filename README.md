@@ -1,5 +1,5 @@
 # omiyage_search
-url:https://zen-dijkstra-3712ef.netlify.app/
+url: https://zen-dijkstra-3712ef.netlify.app/
 > 
 
 ## Build Setup
