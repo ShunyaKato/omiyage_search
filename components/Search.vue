@@ -1,7 +1,6 @@
 <template>
   <div class="search">
     <Area />
-    <Price />
     <Category />
     <Feature />
     <SearchButton />
@@ -14,7 +13,6 @@ import { Component, Vue } from "nuxt-property-decorator";
 @Component({
   components: {
     Area: () => import("~/components/Area.vue"),
-    Price: () => import("~/components/Price.vue"),
     Category: () => import("~/components/Category.vue"),
     Feature: () => import("~/components/Feature.vue"),
     SearchButton: () => import("~/components/SearchButton.vue")
