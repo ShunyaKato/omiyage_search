@@ -43,9 +43,7 @@
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
         <p class="result-main__wrap__content__price">{{resultItem.price}}</p>
-        <div class="result-main__wrap__content__tags">
-          <div class="result-main__wrap__content__tags__tag">タグ</div>
-        </div>
+        <Tag :index="index" />
       </div>
     </div>
     <div class="result-main__none">
@@ -69,7 +67,11 @@ import {
 } from "~/modules/index.ts";
 import _ from "lodash";
 
-@Component
+@Component({
+  components: {
+    Tag: () => import("~/components/Tag.vue")
+  }
+})
 export default class ResultMain extends Vue {
   regionName(regionId: string) {
     return this.$store.state.areaData[regionId].name;
