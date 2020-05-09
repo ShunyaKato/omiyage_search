@@ -3,12 +3,17 @@
     <h1 class="area__title">エリア選択</h1>
     <ClearButton :keyName="'prefectures'" />
     <div class="area__wrap">
-      <select class="area__wrap__region" v-model="selected">
+      <select
+        class="area__wrap__region"
+        v-model="selected"
+        @change="updateRegionParams(selected.selectId)"
+      >
         <option
           class="area__wrap__region__option"
           v-for="(area, key, index) in areaData"
           :key="index"
           :value="{selectId: key}"
+          :selected="isSelected(selected.selectId)"
         >{{area.name}}</option>
       </select>
       <div class="area__wrap__prefecture" v-if="selected.selectId !== '2'">
@@ -48,13 +53,28 @@ export default class Area extends Vue {
     return this.$store.state.areaData;
   }
 
+  isSelected(regionId: string) {
+    if (this.$store.state.searchParams.region === regionId) {
+      return "selected";
+    }
+  }
+
   isChecked(prefectureId: number) {
     if (this.$store.state.searchParams.prefectures.includes(prefectureId)) {
       return "checked";
     }
   }
 
-  selected = { selectId: 0 };
+  selected = { selectId: this.$store.state.searchParams.region };
+
+  updateRegionParams(regionId: string) {
+    //全国を選択した場合チェックをクリアにする
+    if (regionId === "1") {
+      this.$store.commit("clearSearchParams", "prefectures");
+    }
+    this.$store.dispatch("updateRegionParams", regionId);
+    console.log(this.$store.state.searchParams.region);
+  }
 
   updatePrefectureParams(prefectureId: number) {
     this.$store.dispatch("updatePrefectureParams", prefectureId);

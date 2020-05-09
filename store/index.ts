@@ -1,5 +1,12 @@
 import _ from "lodash";
 
+interface searchParamsType {
+  region: number,
+  prefectures: [],
+  categoryIds: [],
+  featureIds: [],
+}
+
 export const state = () => ({
   itemData: [
     {
@@ -7,6 +14,7 @@ export const state = () => ({
       price: 1980,
       url: "https://www.amazon.co.jp/dp/B001KOEEJ8/ref=cm_sw_r_tw_dp_U_x_l7uREb6NQ7F2Z",
       image_url: "https://images-na.ssl-images-amazon.com/images/I/71uH48NZiML._AC_SL1500_.jpg",
+      region: 8,
       prefectureId: 37,
       categoryIds: [1],
       featureIds: [1, 3],
@@ -16,6 +24,7 @@ export const state = () => ({
       price: 1080,
       url: "https://www.amazon.co.jp/dp/B07RYJY2N9/ref=cm_sw_em_r_mt_dp_U_jhvREbXAQRA49",
       image_url: "https://m.media-amazon.com/images/I/51ccXxKM6fL._AC_UL640_FMwebp_QL65_.jpg",
+      region: 7,
       prefectureId: 34,
       categoryIds: [],
       featureIds: [2],
@@ -25,6 +34,7 @@ export const state = () => ({
       price: 1790,
       url: "https://www.amazon.co.jp/dp/B06XK745MC/ref=cm_sw_em_r_mt_dp_U_qnvREbYJVN2PX",
       image_url: "https://images-na.ssl-images-amazon.com/images/I/61VK%2BAVKQhL._AC_.jpg",
+      region: 7,
       prefectureId: 34,
       categoryIds: [1, 3],
       featureIds: [3],
@@ -509,10 +519,7 @@ export const state = () => ({
     },
   ],
   searchParams: {
-    prefectures: [],
-    categoryIds: [],
-    featureIds: [],
-  } = {
+    region: 0,
     prefectures: [],
     categoryIds: [],
     featureIds: [],
@@ -520,6 +527,10 @@ export const state = () => ({
 })
 
 export const mutations = {
+  setRegionParams(state: any, regionId: number) {
+    state.searchParams.region = regionId
+  },
+
   setPrefectureParams(state: any, prefectureId: number) {
     const newPrefectureParams = state.searchParams.prefectures.concat()
     newPrefectureParams.push(prefectureId)
@@ -556,6 +567,9 @@ export const mutations = {
 }
 
 export const actions = {
+  updateRegionParams({ state, commit }: { state: any, commit: any }, regionId: number) {
+    commit('setRegionParams', regionId)
+  },
   updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
     if (state.searchParams.prefectures.includes(prefectureId)) {
       commit('deletePrefectureParams', prefectureId)
