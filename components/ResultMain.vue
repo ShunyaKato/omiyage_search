@@ -1,6 +1,10 @@
 <template>
   <div class="result-main">
     <h1 class="result-main__title">検索結果</h1>
+    <nuxt-link to="/" class="result-main__back">
+      <font-awesome-icon class="result-main__back__icon" icon="angle-double-left" />
+      <p class="result-main__back__text">戻る</p>
+    </nuxt-link>
     <div class="result-main__conditions">
       <p class="result-main__conditions__text">検索条件</p>
       <ul class="result-main__conditions__lists">
@@ -46,7 +50,7 @@
         <Tag :index="index" />
       </div>
     </div>
-    <div class="result-main__none">
+    <div class="result-main__none" v-if="resultItem.length === 0">
       <p class="result-main__none__text">
         該当の商品がありません。
         <br />条件を変えてもう一度お試し下さい。
@@ -182,6 +186,23 @@ export default class ResultMain extends Vue {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  &__back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    &__icon {
+      font-size: 20px;
+      padding-right: 5px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
   &__title {
     font-size: 40px;
   }
