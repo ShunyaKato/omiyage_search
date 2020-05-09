@@ -6,6 +6,14 @@
       <ul class="result-main__conditions__lists">
         <li
           class="result-main__conditions__lists__list"
+          v-if="!$route.query.region && !$route.query.prefectures"
+        >全国</li>
+        <li
+          class="result-main__conditions__lists__list"
+          v-if="!$route.query.prefectures"
+        >{{regionName($route.query.region)}}</li>
+        <li
+          class="result-main__conditions__lists__list"
           v-for="(prefectureId, index) in setPrefectureArray"
           :key="`prefecture-${index}`"
         >{{getPrefectureTag(prefectureId)}}</li>
@@ -63,6 +71,10 @@ import _ from "lodash";
 
 @Component
 export default class ResultMain extends Vue {
+  regionName(regionId: string) {
+    return this.$store.state.areaData[regionId].name;
+  }
+
   get setPrefectureArray(): number[] {
     let prefectureArray: number[] = [];
     if (typeof this.$route.query.prefectures === "string") {
