@@ -1,8 +1,6 @@
 <template>
   <div class="search-button">
-    <nuxt-link :to="{path: 'result', query: setQuery}">
-      <button>検索</button>
-    </nuxt-link>
+    <nuxt-link class="search-button__content" :to="{path: 'result', query: setQuery}">検索</nuxt-link>
   </div>
 </template>
 <script lang="ts">
@@ -37,4 +35,20 @@ export default class SearchBotton extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.search-button {
+  margin: 10px 0;
+  &__content {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background-color: #4f98ca;
+    padding: 10px 30px;
+    border-radius: 20px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
 </style>
