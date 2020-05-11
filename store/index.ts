@@ -42,7 +42,7 @@ export const state = () => ({
   ],
   areaData: {
     0: {
-      name: '地域を選択してください'
+      name: '地域'
     },
     1: {
       name: '全国',
