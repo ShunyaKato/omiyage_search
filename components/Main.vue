@@ -16,7 +16,7 @@ export default class Main extends Vue {}
 <style lang="scss" scoped>
 .main {
   // background-color: #50d890;
-  background-image: url(~@/assets/262796_l.jpg);
+  background-image: url(~@/assets/background_image.jpg);
   display: flex;
   flex-direction: column;
   justify-content: center;
