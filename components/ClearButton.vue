@@ -23,7 +23,6 @@ export default class Clear extends Vue {
   &__button {
     background-color: rgba(39, 39, 39, 0.5);
     color: #effffb;
-    // border: 1px solid #272727;
     border: none;
     border-radius: 8px;
     font-weight: bold;

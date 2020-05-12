@@ -493,7 +493,7 @@ export const state = () => ({
     },
     {
       featureId: 3,
-      name: "大人数にオススメ"
+      name: "大人数"
     },
     {
       featureId: 4,

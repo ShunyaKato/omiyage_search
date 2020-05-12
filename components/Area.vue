@@ -88,10 +88,10 @@ export default class Area extends Vue {
 .area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  width: 100%;
+  padding: 10px 10px;
+  position: relative;
+  width: 171px;
   &__title {
     font-size: 20px;
   }
@@ -100,6 +100,7 @@ export default class Area extends Vue {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     &__region {
       border: 1px solid #bbbbbb;
       border-radius: 2px;
@@ -149,8 +150,9 @@ export default class Area extends Vue {
     }
     &__prefecture {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      // align-items: center;
       &__content {
         display: flex;
         align-items: center;
