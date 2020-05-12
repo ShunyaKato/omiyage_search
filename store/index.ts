@@ -604,6 +604,9 @@ export const mutations = {
       state.searchParams[keyName] = []
     }
   },
+  clearPrefectureParams(state: State) {
+    state.searchParams.prefectures = []
+  }
 }
 
 export const actions = {

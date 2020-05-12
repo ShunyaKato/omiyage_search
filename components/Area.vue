@@ -75,7 +75,7 @@ export default class Area extends Vue {
       this.$store.commit("clearSearchParams", "prefectures");
     }
     this.$store.dispatch("updateRegionParams", regionId);
-    console.log(this.$store.state.searchParams.region);
+    this.$store.commit("clearPrefectureParams");
   }
 
   updatePrefectureParams(prefectureId: number) {
