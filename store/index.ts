@@ -1,10 +1,55 @@
 import _ from "lodash";
 
 interface searchParamsType {
-  region: number,
-  prefectures: [],
-  categoryIds: [],
-  featureIds: [],
+  region: number
+  prefectures: number[]
+  categoryIds: number[]
+  featureIds: number[]
+}
+
+type searchParamsKey = ('region' | 'prefectures' | 'categoryIds' | 'featureIds')
+
+interface itemDataType {
+  name: string
+  price: number
+  url: string
+  image_url: string
+  region: number
+  prefectureId: number
+  categoryIds: number[]
+  featureIds: number[]
+}
+
+interface areaDataType {
+  [key: number]: {
+    name: string
+    id?: number
+    prefectures?: prefectureDataType[]
+  }
+}
+
+interface prefectureDataType {
+  name: string
+  prefectureId: number
+}
+
+interface featureDataType {
+  featureId: number
+  name: string
+}
+
+interface categoryDataType {
+  categoryId: number
+  name: string
+}
+
+interface State {
+  itemData: itemDataType[]
+  areaDate: areaDataType
+  prefectureData: prefectureDataType[]
+  featureData: featureDataType[]
+  categoryData: categoryDataType[]
+  searchParams: searchParamsType
 }
 
 export const state = () => ({
@@ -46,12 +91,10 @@ export const state = () => ({
     },
     1: {
       name: '全国',
-      check: false,
     },
     2: {
       name: '北海道',
       id: 1,
-      check: false,
       prefectures: [
         {
           name: '北海道',
@@ -87,7 +130,6 @@ export const state = () => ({
           prefectureId: 7
         },
       ],
-      check: false
     },
     4: {
       name: '関東',
@@ -122,7 +164,6 @@ export const state = () => ({
           prefectureId: 14
         },
       ],
-      check: false
     },
     5: {
       name: '中部',
@@ -165,7 +206,6 @@ export const state = () => ({
           prefectureId: 23
         },
       ],
-      check: false
     },
     6: {
       name: '近畿',
@@ -200,7 +240,6 @@ export const state = () => ({
           prefectureId: 30
         },
       ],
-      check: false
     },
     7: {
       name: '中国',
@@ -227,7 +266,6 @@ export const state = () => ({
           prefectureId: 35
         },
       ],
-      check: false
     },
     8: {
       name: '四国',
@@ -250,7 +288,6 @@ export const state = () => ({
           prefectureId: 39
         },
       ],
-      check: false
     },
     9: {
       name: '九州・沖縄',
@@ -289,7 +326,6 @@ export const state = () => ({
           prefectureId: 47
         },
       ],
-      check: false
     }
   },
   prefectureData: [
@@ -527,57 +563,61 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setRegionParams(state: any, regionId: number) {
+  setRegionParams(state: State, regionId: number) {
     state.searchParams.region = regionId
   },
 
-  setPrefectureParams(state: any, prefectureId: number) {
+  setPrefectureParams(state: State, prefectureId: number) {
     const newPrefectureParams = state.searchParams.prefectures.concat()
     newPrefectureParams.push(prefectureId)
     const sortedPrefectureParams = _.sortBy(newPrefectureParams)
     state.searchParams.prefectures = sortedPrefectureParams
   },
-  deletePrefectureParams(state: any, prefectureId: number) {
+  deletePrefectureParams(state: State, prefectureId: number) {
     const newPrefectureParams = _.pull(state.searchParams.prefectures.concat(), prefectureId)
     state.searchParams.prefectures = newPrefectureParams
   },
-  setCategoryParams(state: any, categoryId: number) {
+  setCategoryParams(state: State, categoryId: number) {
     const newCategoryParams = state.searchParams.categoryIds.concat()
     newCategoryParams.push(categoryId)
     const sortedCategoryParams = _.sortBy(newCategoryParams)
     state.searchParams.categoryIds = sortedCategoryParams
   },
-  deleteCategoryParams(state: any, categoryId: number) {
+  deleteCategoryParams(state: State, categoryId: number) {
     const newCategoryParams = _.pull(state.searchParams.categoryIds.concat(), categoryId)
     state.searchParams.categoryIds = newCategoryParams
   },
-  setFeatureParams(state: any, featureId: number) {
+  setFeatureParams(state: State, featureId: number) {
     const newFeatureParams = state.searchParams.featureIds.concat()
     newFeatureParams.push(featureId)
     const sortedFeatureParams = _.sortBy(newFeatureParams)
     state.searchParams.featureIds = sortedFeatureParams
   },
-  deleteFeatureParams(state: any, featureId: number) {
+  deleteFeatureParams(state: State, featureId: number) {
     const newFeatureParams = _.pull(state.searchParams.featureIds.concat(), featureId)
     state.searchParams.featureIds = newFeatureParams
   },
-  clearSearchParams(state: any, keyName: string) {
-    state.searchParams[keyName] = []
-  }
+  clearSearchParams(state: State, keyName: searchParamsKey) {
+    if (keyName === 'region') {
+      state.searchParams[keyName] = 0
+    } else {
+      state.searchParams[keyName] = []
+    }
+  },
 }
 
 export const actions = {
-  updateRegionParams({ state, commit }: { state: any, commit: any }, regionId: number) {
+  updateRegionParams({ state, commit }: { state: State, commit: any }, regionId: number) {
     commit('setRegionParams', regionId)
   },
-  updatePrefectureParams({ state, commit }: { state: any, commit: any }, prefectureId: number) {
+  updatePrefectureParams({ state, commit }: { state: State, commit: any }, prefectureId: number) {
     if (state.searchParams.prefectures.includes(prefectureId)) {
       commit('deletePrefectureParams', prefectureId)
     } else {
       commit('setPrefectureParams', prefectureId)
     }
   },
-  updateCategoryParams({ state, commit }: { state: any, commit: any }, categoryId: number) {
+  updateCategoryParams({ state, commit }: { state: State, commit: any }, categoryId: number) {
     if (state.searchParams.categoryIds.includes(categoryId)) {
       commit('deleteCategoryParams', categoryId)
     } else {
