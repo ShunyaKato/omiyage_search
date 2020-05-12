@@ -3,19 +3,21 @@
     <h1 class="area__title">エリア選択</h1>
     <ClearButton :keyName="'prefectures'" />
     <div class="area__wrap">
-      <select
-        class="area__wrap__region"
-        v-model="selected"
-        @change="updateRegionParams(selected.selectId)"
-      >
-        <option
-          class="area__wrap__region__option"
-          v-for="(area, key, index) in areaData"
-          :key="index"
-          :value="{selectId: key}"
-          :selected="isSelected(selected.selectId)"
-        >{{area.name}}</option>
-      </select>
+      <div class="area__wrap__region">
+        <select
+          class="area__wrap__region__select"
+          v-model="selected"
+          @change="updateRegionParams(selected.selectId)"
+        >
+          <option
+            class="area__wrap__region__select__option"
+            v-for="(area, key, index) in areaData"
+            :key="index"
+            :value="{selectId: key}"
+            :selected="isSelected(selected.selectId)"
+          >{{area.name}}</option>
+        </select>
+      </div>
       <div class="area__wrap__prefecture" v-if="selected.selectId !== '2'">
         <div
           class="area__wrap__prefecture__content"
@@ -86,10 +88,10 @@ export default class Area extends Vue {
 .area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  width: 100%;
+  padding: 10px 10px;
+  position: relative;
+  width: 171px;
   &__title {
     font-size: 20px;
   }
@@ -98,13 +100,59 @@ export default class Area extends Vue {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     &__region {
-      margin: 10px;
+      border: 1px solid #bbbbbb;
+      border-radius: 2px;
+      background: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        position: absolute;
+        top: 0.55em;
+        right: 0.35em;
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: "";
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #666666;
+        pointer-events: none;
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 1.5em;
+        bottom: 0;
+        width: 1px;
+        content: "";
+        border-left: 1px solid #bbbbbb;
+      }
+      &__select {
+        width: 100%;
+        padding: 3px 30px 3px 5px;
+        background: transparent;
+        outline: none;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &::-ms-expand {
+          display: none;
+        }
+        &:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #000000;
+        }
+      }
     }
     &__prefecture {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      // align-items: center;
       &__content {
         display: flex;
         align-items: center;

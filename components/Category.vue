@@ -51,12 +51,15 @@ export default class Category extends Vue {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 10px;
+  width: 171px;
   &__title {
     font-size: 20px;
   }
   &__wrap {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
     &__content {
       margin: 0 5px;
       display: flex;
