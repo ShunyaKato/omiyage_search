@@ -164,4 +164,19 @@ export default class Area extends Vue {
     }
   }
 }
+
+@media (max-width: 680px) {
+  .area {
+    width: auto;
+    &__wrap {
+      &__prefecture {
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        padding-top: 7px;
+      }
+    }
+  }
+}
 </style>
