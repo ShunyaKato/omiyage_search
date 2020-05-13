@@ -47,4 +47,20 @@ export default class Search extends Vue {}
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .search {
+    &__wrap {
+      width: 70%;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      &__line {
+        height: 5px;
+        width: 90%;
+        margin: 0 10px;
+      }
+    }
+  }
+}
 </style>
