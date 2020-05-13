@@ -20,6 +20,7 @@ export default class Clear extends Vue {
 
 <style lang="scss" scoped>
 .clear {
+  margin-top: 5px;
   &__button {
     background-color: rgba(39, 39, 39, 0.5);
     color: #effffb;
