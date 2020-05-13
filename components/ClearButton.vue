@@ -26,6 +26,7 @@ export default class Clear extends Vue {
     border: none;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 12px;
   }
 }
 </style>
