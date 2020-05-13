@@ -70,4 +70,15 @@ export default class Category extends Vue {
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .category {
+    width: auto;
+    &__wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 58%;
+    }
+  }
+}
 </style>
