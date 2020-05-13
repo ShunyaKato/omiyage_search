@@ -165,7 +165,7 @@ export default class Area extends Vue {
   }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   .area {
     width: auto;
     &__wrap {

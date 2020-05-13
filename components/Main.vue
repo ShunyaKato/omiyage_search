@@ -40,4 +40,19 @@ export default class Main extends Vue {}
     stroke-width: 5;
   }
 }
+
+@media screen and (max-width: 680px) {
+  .main {
+    -webkit-text-stroke: 0.7px #424242;
+    &__title {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+    &__icon {
+      font-size: 70px;
+    }
+  }
+}
 </style>
