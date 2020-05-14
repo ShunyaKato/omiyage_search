@@ -53,11 +53,9 @@
     <div class="result-main__none" v-if="resultItem.length === 0">
       <p class="result-main__none__text">
         該当の商品がありません。
-        <br />条件を変えてもう一度お試し下さい。
+        <br />条件を変えてお試し下さい。
       </p>
-      <nuxt-link to="/" class="result-main__none__link">
-        <button class="result-main__none__link__button">条件を変えて検索</button>
-      </nuxt-link>
+      <nuxt-link to="/" class="result-main__none__link">条件を変えて検索</nuxt-link>
     </div>
   </div>
 </template>
@@ -262,8 +260,16 @@ export default class ResultMain extends Vue {
       text-align: center;
     }
     &__link {
-      &__button {
-        font-size: 20px;
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+      background-color: #4f98ca;
+      padding: 9px 30px;
+      border-radius: 20px;
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
@@ -271,6 +277,9 @@ export default class ResultMain extends Vue {
 
 @media screen and (max-width: 680px) {
   .result-main {
+    &__title {
+      font-size: 30px;
+    }
     &__wrap {
       flex-direction: column;
       &__content {
@@ -287,6 +296,14 @@ export default class ResultMain extends Vue {
         &__price {
           font-size: 16px;
         }
+      }
+    }
+    &__none {
+      &__text {
+        font-size: 22px;
+      }
+      &__link {
+        font-size: 20px;
       }
     }
   }
