@@ -152,8 +152,6 @@ export default class Area extends Vue {
       display: flex;
       flex-direction: column;
       padding-top: 5px;
-      // flex-wrap: wrap;
-      // align-items: center;
       &__content {
         display: flex;
         align-items: center;

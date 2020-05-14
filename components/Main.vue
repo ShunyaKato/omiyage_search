@@ -1,7 +1,10 @@
 <template>
   <div class="main">
     <h1 class="main__title">おみやげ検索</h1>
-    <p class="main__text">あなたにピッタリなおみやげを見つけよう！！</p>
+    <p class="main__text">
+      あなたにピッタリな
+      <span class="main__text__break"></span>おみやげを見つけよう！！
+    </p>
     <font-awesome-icon class="main__icon" icon="angle-down" />
   </div>
 </template>
@@ -32,6 +35,7 @@ export default class Main extends Vue {}
     font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
+    text-align: center;
   }
   &__icon {
     font-size: 100px;
@@ -49,6 +53,9 @@ export default class Main extends Vue {}
     }
     &__text {
       font-size: 20px;
+      &__break {
+        display: block;
+      }
     }
     &__icon {
       font-size: 70px;
