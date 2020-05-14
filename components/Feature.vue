@@ -76,7 +76,7 @@ export default class Feature extends Vue {
     &__wrap {
       flex-direction: row;
       flex-wrap: wrap;
-      width: 58%;
+      width: 164px;
       justify-content: space-between;
     }
   }

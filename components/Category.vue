@@ -77,7 +77,7 @@ export default class Category extends Vue {
     &__wrap {
       flex-direction: row;
       flex-wrap: wrap;
-      width: 58%;
+      width: 163.6px;
     }
   }
 }
