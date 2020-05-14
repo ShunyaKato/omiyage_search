@@ -1,15 +1,15 @@
 <template>
   <div class="tag">
     <div class="tag__wrap">
-      <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[index].prefectureId)}}</p>
+      <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
       <p
         class="tag__wrap__category tag__icon"
-        v-for="(categoryId, index) in itemData[index].categoryIds"
+        v-for="(categoryId, index) in itemData[0].categoryIds"
         :key="`first-${index}`"
       >#{{getCategoryTag(categoryId)}}</p>
       <p
         class="tag__wrap__feature tag__icon"
-        v-for="(featureId, index) in itemData[index].featureIds"
+        v-for="(featureId, index) in itemData[0].featureIds"
         :key="`second-${index}`"
       >#{{getFeatureTag(featureId)}}</p>
     </div>
@@ -23,14 +23,16 @@ import {
   getCategoryTag,
   getFeatureTag
 } from "~/modules/index.ts";
+import _ from "lodash";
 
 @Component
 export default class Tag extends Vue {
   @Prop()
-  index!: number;
+  itemId!: number;
 
   get itemData() {
-    return this.$store.state.itemData;
+    const itemData = _.filter(this.$store.state.itemData, { id: this.itemId });
+    return itemData;
   }
 
   getPrefectureTag(prefectureId: number) {

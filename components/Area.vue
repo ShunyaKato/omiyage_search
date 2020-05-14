@@ -100,7 +100,7 @@ export default class Area extends Vue {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding-top: 10px;
     &__region {
       border: 1px solid #bbbbbb;
       border-radius: 2px;
@@ -151,8 +151,7 @@ export default class Area extends Vue {
     &__prefecture {
       display: flex;
       flex-direction: column;
-      // flex-wrap: wrap;
-      // align-items: center;
+      padding-top: 5px;
       &__content {
         display: flex;
         align-items: center;
@@ -160,6 +159,21 @@ export default class Area extends Vue {
         &__checkbox {
           margin-right: 3px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .area {
+    width: auto;
+    &__wrap {
+      &__prefecture {
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        padding-top: 7px;
       }
     }
   }

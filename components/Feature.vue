@@ -69,4 +69,16 @@ export default class Feature extends Vue {
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .feature {
+    width: auto;
+    &__wrap {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 164px;
+      justify-content: space-between;
+    }
+  }
+}
 </style>

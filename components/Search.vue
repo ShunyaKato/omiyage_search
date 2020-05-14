@@ -34,7 +34,6 @@ export default class Search extends Vue {}
   justify-content: center;
   &__wrap {
     width: 533px;
-    height: 330px;
     border: 5px solid #50d890;
     display: flex;
     margin: 30px 0;
@@ -44,6 +43,21 @@ export default class Search extends Vue {}
       margin: 10px 0;
       border-radius: 2.5px;
       background-color: #50d890;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .search {
+    &__wrap {
+      width: 70%;
+      flex-direction: column;
+      align-items: center;
+      &__line {
+        height: 5px;
+        width: 90%;
+        margin: 0 10px;
+      }
     }
   }
 }
