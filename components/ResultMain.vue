@@ -34,7 +34,7 @@
       </ul>
     </div>
     <div class="result-main__counts">
-      <p class="result-main__counts__text">検索結果{{resultItem.length}}件</p>
+      <p class="result-main__counts__text">検索結果：{{resultItem.length}}件</p>
     </div>
     <div class="result-main__wrap">
       <div
@@ -46,7 +46,7 @@
           <img class="result-main__wrap__content__link__image" :src="resultItem.image_url" />
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
-        <p class="result-main__wrap__content__price">{{resultItem.price}}</p>
+        <p class="result-main__wrap__content__price">{{resultItem.price}}円</p>
         <Tag :index="index" />
       </div>
     </div>
@@ -210,6 +210,15 @@ export default class ResultMain extends Vue {
     margin: 20px 0;
     &__text {
       font-size: 20px;
+      text-align: center;
+    }
+    &__lists {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      &__list {
+        margin: 0 3px;
+      }
     }
   }
   &__counts {
@@ -224,8 +233,6 @@ export default class ResultMain extends Vue {
     &__content {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
       margin: 0 10px;
       &__link {
@@ -252,6 +259,7 @@ export default class ResultMain extends Vue {
     justify-content: center;
     &__text {
       font-size: 30px;
+      text-align: center;
     }
     &__link {
       &__button {
