@@ -268,4 +268,27 @@ export default class ResultMain extends Vue {
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .result-main {
+    &__wrap {
+      flex-direction: column;
+      &__content {
+        width: 200px;
+        &__link {
+          &__image {
+            width: 200px;
+            height: 200px;
+          }
+        }
+        &__name {
+          font-size: 16px;
+        }
+        &__price {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
 </style>
