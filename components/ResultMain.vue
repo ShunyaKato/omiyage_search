@@ -124,7 +124,7 @@ export default class ResultMain extends Vue {
       if (this.setPrefectureArray.length === 0) {
         return item;
       }
-      // setPrefectureArrayがitem.prefectureIdsに含まれるかどうか
+      // setPrefectureArrayにitem.prefectureIdsが含まれるかどうか
       if (this.setPrefectureArray.includes(item.prefectureId) === true) {
         return item;
       }
@@ -134,13 +134,8 @@ export default class ResultMain extends Vue {
       if (this.setCategoryArray.length === 0) {
         return item;
       }
-      let isMach = false; // setCategoryArrayがitem.categoryIdsに含まれるかどうか
-      _.each(this.setCategoryArray, categoryId => {
-        if (item.categoryIds.includes(categoryId) === true) {
-          isMach = true;
-        }
-      });
-      if (isMach) {
+      // setCategoryArrayにitem.CategoryIdsが含まれるかどうか
+      if (this.setCategoryArray.includes(item.categoryIds) === true) {
         return item;
       }
     });

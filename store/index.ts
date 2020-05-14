@@ -16,7 +16,7 @@ interface itemDataType {
   image_url: string
   region: number
   prefectureId: number
-  categoryIds: number[]
+  categoryIds: number
   featureIds: number[]
 }
 
@@ -62,7 +62,7 @@ export const state = () => ({
       image_url: "https://images-na.ssl-images-amazon.com/images/I/71uH48NZiML._AC_SL1500_.jpg",
       region: 8,
       prefectureId: 37,
-      categoryIds: [1],
+      categoryIds: 1,
       featureIds: [1, 3],
     },
     {
@@ -73,7 +73,7 @@ export const state = () => ({
       image_url: "https://m.media-amazon.com/images/I/51ccXxKM6fL._AC_UL640_FMwebp_QL65_.jpg",
       region: 7,
       prefectureId: 34,
-      categoryIds: [],
+      categoryIds: 3,
       featureIds: [2],
     },
     {
@@ -84,7 +84,7 @@ export const state = () => ({
       image_url: "https://images-na.ssl-images-amazon.com/images/I/61VK%2BAVKQhL._AC_.jpg",
       region: 7,
       prefectureId: 34,
-      categoryIds: [1, 3],
+      categoryIds: 3,
       featureIds: [3],
     }
   ],
