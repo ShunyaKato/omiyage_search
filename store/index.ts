@@ -55,6 +55,7 @@ interface State {
 export const state = () => ({
   itemData: [
     {
+      id: 1,
       name: "さぬきうどんの亀城庵 讃岐うどん",
       price: 1980,
       url: "https://www.amazon.co.jp/dp/B001KOEEJ8/ref=cm_sw_r_tw_dp_U_x_l7uREb6NQ7F2Z",
@@ -65,6 +66,7 @@ export const state = () => ({
       featureIds: [1, 3],
     },
     {
+      id: 2,
       name: "てくてく和三盆クッキー",
       price: 1080,
       url: "https://www.amazon.co.jp/dp/B07RYJY2N9/ref=cm_sw_em_r_mt_dp_U_jhvREbXAQRA49",
@@ -75,6 +77,7 @@ export const state = () => ({
       featureIds: [2],
     },
     {
+      id: 3,
       name: "もみじまんじゅう3種詰め合わせ",
       price: 1790,
       url: "https://www.amazon.co.jp/dp/B06XK745MC/ref=cm_sw_em_r_mt_dp_U_qnvREbYJVN2PX",

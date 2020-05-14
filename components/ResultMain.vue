@@ -47,7 +47,7 @@
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
         <p class="result-main__wrap__content__price">{{resultItem.price}}円</p>
-        <Tag :index="index" />
+        <Tag :itemId="resultItem.id" />
       </div>
     </div>
     <div class="result-main__none" v-if="resultItem.length === 0">

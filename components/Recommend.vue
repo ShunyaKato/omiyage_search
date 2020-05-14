@@ -8,7 +8,7 @@
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
         <p class="recommend__wrap__content__price">{{itemData.price}}円</p>
-        <Tag :index="index" />
+        <Tag :itemId="itemData.id" />
       </div>
     </div>
   </div>
