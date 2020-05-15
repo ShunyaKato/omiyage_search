@@ -28,7 +28,6 @@ export default class SearchBotton extends Vue {
     if (this.$store.state.searchParams.featureIds.length > 0) {
       query.featureIds = this.$store.state.searchParams.featureIds.toString();
     }
-    console.log(query);
     return query;
   }
 }

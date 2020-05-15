@@ -2,15 +2,11 @@
   <div class="tag">
     <div class="tag__wrap">
       <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
-      <p
-        class="tag__wrap__category tag__icon"
-        v-for="(categoryId, index) in itemData[0].categoryIds"
-        :key="`first-${index}`"
-      >#{{getCategoryTag(categoryId)}}</p>
+      <p class="tag__wrap__category tag__icon">#{{getCategoryTag(itemData[0].categoryIds)}}</p>
       <p
         class="tag__wrap__feature tag__icon"
         v-for="(featureId, index) in itemData[0].featureIds"
-        :key="`second-${index}`"
+        :key="index"
       >#{{getFeatureTag(featureId)}}</p>
     </div>
   </div>
