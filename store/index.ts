@@ -70,7 +70,7 @@ export const state = () => ({
       name: "てくてく和三盆クッキー",
       price: 1080,
       url: "https://www.amazon.co.jp/dp/B07RYJY2N9/ref=cm_sw_em_r_mt_dp_U_jhvREbXAQRA49",
-      image_url: "https://m.media-amazon.com/images/I/51ccXxKM6fL._AC_UL640_FMwebp_QL65_.jpg",
+      image_url: "https://images-na.ssl-images-amazon.com/images/I/51ccXxKM6fL._AC_.jpg",
       region: 7,
       prefectureId: 34,
       categoryIds: 3,
