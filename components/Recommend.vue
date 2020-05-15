@@ -43,19 +43,22 @@ export default class Recommend extends Vue {
   &__wrap {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     &__content {
       margin: 10px;
       width: 200px;
       &__link {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &__image {
-          width: 200px;
-          height: 200px;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
       &__name {
-        font-size: 16px;
-      }
-      &__price {
         font-size: 16px;
       }
     }

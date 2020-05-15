@@ -476,7 +476,7 @@ export const state = () => ({
     },
     {
       id: 43,
-      name: "シウマイの崎陽軒",
+      name: "崎陽軒シウマイ",
       url: "https://www.amazon.co.jp/dp/B00F3P4PLC/ref=cm_sw_r_tw_dp_U_x_mhXTEbB2GEGYG",
       image_url: "https://images-na.ssl-images-amazon.com/images/I/510oTp1VjEL._AC_.jpg",
       region: 4,
@@ -2059,4 +2059,3 @@ export const actions = {
     }
   },
 }
-
