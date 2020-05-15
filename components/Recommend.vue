@@ -7,7 +7,7 @@
           <img class="recommend__wrap__content__link__image" :src="itemData.image_url" />
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
-        <p class="recommend__wrap__content__price">{{itemData.price}}円</p>
+        <!-- <p class="recommend__wrap__content__price">{{itemData.price}}円</p> -->
         <Tag :itemId="itemData.id" />
       </div>
     </div>
