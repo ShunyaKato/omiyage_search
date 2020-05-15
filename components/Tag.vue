@@ -6,7 +6,7 @@
       <p
         class="tag__wrap__feature tag__icon"
         v-for="(featureId, index) in itemData[0].featureIds"
-        :key="`second-${index}`"
+        :key="index"
       >#{{getFeatureTag(featureId)}}</p>
     </div>
   </div>
