@@ -5,11 +5,12 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'おとりよせ検索' || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'webでお取り寄せできるご当地グルメを簡単検索！' || '' },
+      { name: 'google-site-verification', content: 'AyewlBGcAgNBrX9xqzT7CS8PlsQ--tkOx8fYEmFFDXc' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-48.ico' }

@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <h1 class="main__title">おみやげ検索</h1>
+    <h1 class="main__title">おとりよせ検索</h1>
     <p class="main__text">
       あなたにピッタリな
-      <span class="main__text__break"></span>おみやげを見つけよう！！
+      <span class="main__text__break"></span>ご当地グルメを見つけよう！！
     </p>
     <font-awesome-icon class="main__icon" icon="angle-down" />
   </div>
