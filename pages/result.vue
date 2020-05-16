@@ -15,7 +15,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 export default class Result extends Vue {
   head() {
     return {
-      title: "検索結果画面 | おとりよせ検索",
+      title: "検索結果 | おとりよせ検索",
       meta: [
         {
           hid: "description",
