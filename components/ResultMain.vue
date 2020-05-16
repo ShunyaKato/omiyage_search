@@ -46,7 +46,6 @@
           <img class="result-main__wrap__content__link__image" :src="resultItem.image_url" />
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
-        <p class="result-main__wrap__content__price">{{resultItem.price}}円</p>
         <Tag :itemId="resultItem.id" />
       </div>
     </div>
@@ -223,25 +222,28 @@ export default class ResultMain extends Vue {
   &__wrap {
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     &__content {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      margin: 0 10px;
+      margin: 10px 10px;
+      width: 300px;
       &__link {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &__image {
-          width: 300px;
-          height: 300px;
-          background-color: blue;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
       &__name {
         margin: 10px 0 3px;
         font-size: 20px;
-      }
-      &__price {
-        font-size: 18px;
-        margin-bottom: 3px;
       }
     }
   }

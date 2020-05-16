@@ -7,7 +7,7 @@
           <img class="recommend__wrap__content__link__image" :src="itemData.image_url" />
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
-        <p class="recommend__wrap__content__price">{{itemData.price}}円</p>
+        <!-- <p class="recommend__wrap__content__price">{{itemData.price}}円</p> -->
         <Tag :itemId="itemData.id" />
       </div>
     </div>
@@ -43,19 +43,22 @@ export default class Recommend extends Vue {
   &__wrap {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     &__content {
       margin: 10px;
       width: 200px;
       &__link {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &__image {
-          width: 200px;
-          height: 200px;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
       &__name {
-        font-size: 16px;
-      }
-      &__price {
         font-size: 16px;
       }
     }
