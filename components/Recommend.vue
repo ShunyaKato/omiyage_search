@@ -31,7 +31,6 @@ export default class Recommend extends Vue {
 
 <style lang="scss" scoped>
 .recommend {
-  background-color: #effffb;
   display: flex;
   flex-direction: column;
   align-items: center;

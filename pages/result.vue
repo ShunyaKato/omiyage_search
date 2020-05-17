@@ -1,6 +1,7 @@
 <template>
   <div class="result">
     <ResultMain />
+    <Banner />
   </div>
 </template>
 
@@ -9,7 +10,8 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
   components: {
-    ResultMain: () => import("~/components/ResultMain.vue")
+    ResultMain: () => import("~/components/ResultMain.vue"),
+    Banner: () => import("~/components/Banner.vue")
   }
 })
 export default class Result extends Vue {
@@ -29,4 +31,7 @@ export default class Result extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.result {
+  padding-bottom: 50px;
+}
 </style>

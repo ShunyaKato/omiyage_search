@@ -2,6 +2,7 @@
   <div class="index">
     <Main />
     <Search />
+    <Banner />
     <Recommend />
   </div>
 </template>
@@ -13,7 +14,8 @@ import { Component, Vue } from "nuxt-property-decorator";
   components: {
     Main: () => import("~/components/Main.vue"),
     Search: () => import("~/components/Search.vue"),
-    Recommend: () => import("~/components/Recommend.vue")
+    Recommend: () => import("~/components/Recommend.vue"),
+    Banner: () => import("~/components/Banner.vue")
   }
 })
 export default class Home extends Vue {}
