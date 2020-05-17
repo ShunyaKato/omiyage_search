@@ -30,4 +30,14 @@ export default class Clear extends Vue {
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 680px) {
+  .clear {
+    &__button {
+      font-size: 13px;
+      padding: 3px 8px;
+      border-radius: 10px;
+    }
+  }
+}
 </style>

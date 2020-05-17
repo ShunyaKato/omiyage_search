@@ -60,11 +60,11 @@ export default class Feature extends Vue {
     flex-direction: column;
     padding-top: 10px;
     &__content {
-      margin: 0 5px;
+      margin-bottom: 2px;
       display: flex;
       align-items: center;
       &__checkbox {
-        margin-right: 3px;
+        margin-right: 5px;
       }
     }
   }
@@ -74,10 +74,10 @@ export default class Feature extends Vue {
   .feature {
     width: auto;
     &__wrap {
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 164px;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 98px 82px;
+      grid-row-gap: 10px;
+      grid-column-gap: 11px;
     }
   }
 }
