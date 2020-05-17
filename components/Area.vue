@@ -155,9 +155,9 @@ export default class Area extends Vue {
       &__content {
         display: flex;
         align-items: center;
-        margin: 0 5px;
+        margin-bottom: 2px;
         &__checkbox {
-          margin-right: 3px;
+          margin-right: 5px;
         }
       }
     }
@@ -169,11 +169,11 @@ export default class Area extends Vue {
     width: auto;
     &__wrap {
       &__prefecture {
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-        padding-top: 7px;
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-column-gap: 45px;
+        grid-row-gap: 10px;
+        padding-top: 10px;
       }
     }
   }

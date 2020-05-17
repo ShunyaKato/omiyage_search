@@ -172,8 +172,7 @@ export default class ResultMain extends Vue {
 
 <style lang="scss" scoped>
 .result-main {
-  background-color: #effffb;
-  padding: 50px 0;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,11 +227,11 @@ export default class ResultMain extends Vue {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      margin: 10px 10px;
-      width: 300px;
+      margin: 20px 10px;
+      width: 250px;
       &__link {
         width: 100%;
-        height: 300px;
+        height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -282,9 +281,14 @@ export default class ResultMain extends Vue {
       &__content {
         width: 200px;
         &__link {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           &__image {
-            width: 200px;
-            height: 200px;
+            max-width: 100%;
+            max-height: 200px;
           }
         }
         &__name {
@@ -305,4 +309,19 @@ export default class ResultMain extends Vue {
     }
   }
 }
+
+// @media screen and (max-width: 680px) {
+//   .result-main {
+//     &__wrap {
+//       &__content {
+//         &__link {
+//           height: auto;
+//           &__image {
+//             max-height: 200px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 </style>

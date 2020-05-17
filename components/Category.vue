@@ -61,11 +61,11 @@ export default class Category extends Vue {
     flex-direction: column;
     padding-top: 10px;
     &__content {
-      margin: 0 5px;
+      margin-bottom: 2px;
       display: flex;
       align-items: center;
       &__checkbox {
-        margin-right: 3px;
+        margin-right: 5px;
       }
     }
   }
@@ -75,9 +75,10 @@ export default class Category extends Vue {
   .category {
     width: auto;
     &__wrap {
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 163.6px;
+      display: grid;
+      grid-template-columns: 82px 82px;
+      grid-column-gap: 26px;
+      grid-row-gap: 10px;
     }
   }
 }

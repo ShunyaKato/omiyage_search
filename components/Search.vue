@@ -27,7 +27,6 @@ export default class Search extends Vue {}
 
 <style lang="scss" scoped>
 .search {
-  background-color: #effffb;
   display: flex;
   flex-direction: column;
   align-items: center;
