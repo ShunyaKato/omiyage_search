@@ -2,8 +2,8 @@ export const itemData = [
   {
     id: 1,
     name: "じゃがポックル",
-    url: "https://www.amazon.co.jp/dp/B073N3PD1H/ref=cm_sw_r_tw_dp_U_x_8qvREbWASDVZ6",
-    image_url: "https://images-na.ssl-images-amazon.com/images/I/51qif4gyghL._AC_.jpg",
+    url: "https://www.amazon.co.jp/gp/product/B073N3PD1H/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B073N3PD1H&linkCode=as2&tag=katoma02-22&linkId=73b620e1dac2ffa491a721fcc6d6c222",
+    image_url: "//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B073N3PD1H&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=katoma02-22",
     region: 2,
     prefectureId: 1,
     categoryIds: 3,

@@ -228,10 +228,10 @@ export default class ResultMain extends Vue {
       flex-direction: column;
       flex-wrap: wrap;
       margin: 20px 10px;
-      width: 300px;
+      width: 250px;
       &__link {
         width: 100%;
-        height: 300px;
+        height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
