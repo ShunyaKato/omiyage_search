@@ -28,11 +28,13 @@ export default {
     '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
+    // 'swiper/css/swiper.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/vue-awesome-swiper', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
