@@ -40,8 +40,6 @@ export default class Recommend extends Vue {
       copyItemData[randomNumber] = copyItemData[dataLength - 1];
       dataLength--;
     }
-    console.log("recommendItem");
-    console.log(recommendItem);
     return recommendItem;
   }
 }
