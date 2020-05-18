@@ -309,19 +309,4 @@ export default class ResultMain extends Vue {
     }
   }
 }
-
-// @media screen and (max-width: 680px) {
-//   .result-main {
-//     &__wrap {
-//       &__content {
-//         &__link {
-//           height: auto;
-//           &__image {
-//             max-height: 200px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 </style>
