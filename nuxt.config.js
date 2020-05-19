@@ -28,7 +28,7 @@ export default {
     '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
     '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
-    // 'swiper/css/swiper.css',
+    'swiper/css/swiper.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -59,7 +59,10 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    vendor: [
+      'vue-awesome-swiper'
+    ]
   },
   fontawesome: {
     imports: [

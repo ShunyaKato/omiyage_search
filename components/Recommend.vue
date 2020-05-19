@@ -1,8 +1,8 @@
 <template>
   <div class="recommend">
     <h2 class="recommend__title">オススメ</h2>
-    <div class="recommend__wrap">
-      <div
+    <swiper class="recommend__wrap" :options="swiperOption">
+      <swiper-slide
         class="recommend__wrap__content"
         v-for="(itemData, index) in randomRecommendItem"
         :key="index"
@@ -12,8 +12,9 @@
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
         <Tag :itemId="itemData.id" />
-      </div>
-    </div>
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
@@ -34,7 +35,7 @@ export default class Recommend extends Vue {
     const copyItemData = this.$store.state.itemData.concat();
     let dataLength = copyItemData.length;
     const recommendItem = [];
-    for (let i = 1; i < 4; i++) {
+    for (let i = 1; i < 11; i++) {
       const randomNumber: number = Math.floor(Math.random() * dataLength);
       recommendItem.push(copyItemData[randomNumber]);
       copyItemData[randomNumber] = copyItemData[dataLength - 1];
@@ -42,6 +43,17 @@ export default class Recommend extends Vue {
     }
     return recommendItem;
   }
+
+  swiperOption: object = {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  };
 }
 </script>
 
@@ -56,11 +68,9 @@ export default class Recommend extends Vue {
     font-size: 20px;
   }
   &__wrap {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
     &__content {
-      margin: 10px;
       width: 200px;
       &__link {
         width: 100%;
@@ -69,7 +79,7 @@ export default class Recommend extends Vue {
         justify-content: center;
         align-items: center;
         &__image {
-          max-width: 100%;
+          max-width: 200px;
           max-height: 100%;
         }
       }
@@ -78,6 +88,11 @@ export default class Recommend extends Vue {
       }
     }
   }
+}
+
+.swiper-pagination {
+  position: initial;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 680px) {
