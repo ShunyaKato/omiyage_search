@@ -19,9 +19,12 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxt/typescript-runtime": "^0.4.6",
     "@types/lodash": "^4.14.150",
+    "@types/swiper": "^5.3.1",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-property-decorator": "^2.7.2"
+    "nuxt-property-decorator": "^2.7.2",
+    "swiper": "^5.4.0",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
