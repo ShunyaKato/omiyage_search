@@ -15,7 +15,6 @@
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    <RecommendLoading />
   </div>
 </template>
 
@@ -24,8 +23,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
   components: {
-    Tag: () => import("~/components/Tag.vue"),
-    RecommendLoading: () => import("~/components/RecommendLoading.vue")
+    Tag: () => import("~/components/Tag.vue")
   }
 })
 export default class Recommend extends Vue {
