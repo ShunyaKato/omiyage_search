@@ -170,8 +170,8 @@ export default class Area extends Vue {
     &__wrap {
       &__prefecture {
         display: grid;
-        grid-template-columns: 50px 50px;
-        grid-column-gap: 45px;
+        grid-template-columns: 68px 68px;
+        grid-column-gap: 35px;
         grid-row-gap: 10px;
         padding-top: 10px;
       }
