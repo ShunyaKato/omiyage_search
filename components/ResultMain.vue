@@ -42,7 +42,7 @@
         v-for="(resultItem, index) in resultItem"
         :key="index"
       >
-        <a class="result-main__wrap__content__link" :href="resultItem.url">
+        <a class="result-main__wrap__content__link" :href="resultItem.url" target="_blank">
           <img class="result-main__wrap__content__link__image" :src="resultItem.image_url" />
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
