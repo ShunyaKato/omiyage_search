@@ -7,7 +7,7 @@
         v-for="(itemData, index) in randomRecommendItem"
         :key="index"
       >
-        <a class="recommend__wrap__content__link" :href="itemData.url">
+        <a class="recommend__wrap__content__link" :href="itemData.url" target="_blank">
           <img class="recommend__wrap__content__link__image" :src="itemData.image_url" />
         </a>
         <p class="recommend__wrap__content__name">{{itemData.name}}</p>
