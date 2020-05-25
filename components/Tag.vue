@@ -1,11 +1,14 @@
 <template>
   <div class="tag">
     <div class="tag__wrap">
-      <a class="tag__wrap__content" @click="clickPrefectureTag(itemData[0].prefectureId)">
+      <nuxt-link
+        class="tag__wrap__content"
+        :to="{path: 'result', query: setPrefectureQuery(itemData[0])}"
+      >
         <p
           class="tag__wrap__content__prefecture tag__icon"
         >#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
-      </a>
+      </nuxt-link>
       <a class="tag__wrap__content">
         <p
           class="tag__wrap__content__category tag__icon"
@@ -53,8 +56,15 @@ export default class Tag extends Vue {
     return getFeatureTag(this.$store.state.featureData, featureId);
   }
 
-  clickPrefectureTag(prefectureId: number) {
-    this.$emit("prefectureTagId", prefectureId);
+  setPrefectureQuery(itemData: any) {
+    interface queryType {
+      region?: string;
+      prefectures?: string;
+    }
+    let query: queryType = {};
+    query.region = itemData.region.toString();
+    query.prefectures = itemData.prefectureId.toString();
+    return query;
   }
 }
 </script>
