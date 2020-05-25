@@ -17,13 +17,14 @@
           class="tag__wrap__content__category tag__icon"
         >#{{getCategoryTag(itemData[0].categoryIds)}}</p>
       </nuxt-link>
-      <a
+      <nuxt-link
         class="tag__wrap__content"
+        :to="{path: 'result', query: setFeatureQuery(featureId)}"
         v-for="(featureId, index) in itemData[0].featureIds"
         :key="index"
       >
         <p class="tag__wrap__content__feature tag__icon">#{{getFeatureTag(featureId)}}</p>
-      </a>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -76,6 +77,15 @@ export default class Tag extends Vue {
     }
     let query: queryType = {};
     query.categoryIds = itemData.categoryIds.toString();
+    return query;
+  }
+
+  setFeatureQuery(featureId: number) {
+    interface queryType {
+      featureIds?: string;
+    }
+    let query: queryType = {};
+    query.featureIds = featureId.toString();
     return query;
   }
 }
