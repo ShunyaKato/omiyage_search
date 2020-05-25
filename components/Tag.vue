@@ -97,6 +97,7 @@ export default class Tag extends Vue {
     display: flex;
     flex-wrap: wrap;
     &__content {
+      text-decoration: none;
       display: block;
     }
   }
