@@ -15,7 +15,7 @@
       >
         <p
           class="tag__wrap__content__category tag__icon"
-        >#{{getCategoryTag(itemData[0].categoryIds)}}</p>
+        >#{{getCategoryTag(itemData[0].categoryId)}}</p>
       </nuxt-link>
       <nuxt-link
         class="tag__wrap__content"
@@ -76,7 +76,7 @@ export default class Tag extends Vue {
       categoryIds?: string;
     }
     let query: queryType = {};
-    query.categoryIds = itemData.categoryIds.toString();
+    query.categoryIds = itemData.categoryId.toString();
     return query;
   }
 
