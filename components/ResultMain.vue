@@ -46,7 +46,7 @@
           <img class="result-main__wrap__content__link__image" :src="resultItem.image_url" />
         </a>
         <p class="result-main__wrap__content__name">{{resultItem.name}}</p>
-        <Tag :itemId="resultItem.id" />
+        <Tag :itemId="resultItem.id" @prefectureTagId="changePrefecture" />
       </div>
     </div>
     <div class="result-main__none" v-if="resultItem.length === 0">
@@ -166,6 +166,12 @@ export default class ResultMain extends Vue {
 
   getFeatureTag(featureId: number) {
     return getFeatureTag(this.$store.state.featureData, featureId);
+  }
+
+  changePrefecture(prefectureId: number) {
+    console.log("run");
+    console.log("prefectureId");
+    console.log(prefectureId);
   }
 }
 </script>
