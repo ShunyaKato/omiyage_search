@@ -1,13 +1,23 @@
 <template>
   <div class="tag">
     <div class="tag__wrap">
-      <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
-      <p class="tag__wrap__category tag__icon">#{{getCategoryTag(itemData[0].categoryIds)}}</p>
-      <p
-        class="tag__wrap__feature tag__icon"
-        v-for="(featureId, index) in itemData[0].featureIds"
-        :key="index"
-      >#{{getFeatureTag(featureId)}}</p>
+      <a class="tag__wrap__content">
+        <p
+          class="tag__wrap__content__prefecture tag__icon"
+        >#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
+      </a>
+      <a class="tag__wrap__content">
+        <p
+          class="tag__wrap__content__category tag__icon"
+        >#{{getCategoryTag(itemData[0].categoryIds)}}</p>
+      </a>
+      <a class="tag__wrap__content">
+        <p
+          class="tag__wrap__content__feature tag__icon"
+          v-for="(featureId, index) in itemData[0].featureIds"
+          :key="index"
+        >#{{getFeatureTag(featureId)}}</p>
+      </a>
     </div>
   </div>
 </template>
