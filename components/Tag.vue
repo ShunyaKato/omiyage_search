@@ -9,11 +9,14 @@
           class="tag__wrap__content__prefecture tag__icon"
         >#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
       </nuxt-link>
-      <a class="tag__wrap__content">
+      <nuxt-link
+        class="tag__wrap__content"
+        :to="{path: 'result', query: setCategoryQuery(itemData[0])}"
+      >
         <p
           class="tag__wrap__content__category tag__icon"
         >#{{getCategoryTag(itemData[0].categoryIds)}}</p>
-      </a>
+      </nuxt-link>
       <a
         class="tag__wrap__content"
         v-for="(featureId, index) in itemData[0].featureIds"
@@ -64,6 +67,15 @@ export default class Tag extends Vue {
     let query: queryType = {};
     query.region = itemData.region.toString();
     query.prefectures = itemData.prefectureId.toString();
+    return query;
+  }
+
+  setCategoryQuery(itemData: any) {
+    interface queryType {
+      categoryIds?: string;
+    }
+    let query: queryType = {};
+    query.categoryIds = itemData.categoryIds.toString();
     return query;
   }
 }
