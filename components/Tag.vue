@@ -11,12 +11,12 @@
           class="tag__wrap__content__category tag__icon"
         >#{{getCategoryTag(itemData[0].categoryIds)}}</p>
       </a>
-      <a class="tag__wrap__content">
-        <p
-          class="tag__wrap__content__feature tag__icon"
-          v-for="(featureId, index) in itemData[0].featureIds"
-          :key="index"
-        >#{{getFeatureTag(featureId)}}</p>
+      <a
+        class="tag__wrap__content"
+        v-for="(featureId, index) in itemData[0].featureIds"
+        :key="index"
+      >
+        <p class="tag__wrap__content__feature tag__icon">#{{getFeatureTag(featureId)}}</p>
       </a>
     </div>
   </div>
@@ -60,6 +60,9 @@ export default class Tag extends Vue {
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+    &__content {
+      display: block;
+    }
   }
   &__icon {
     background-color: #4f98ca;
