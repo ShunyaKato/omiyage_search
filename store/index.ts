@@ -17,7 +17,7 @@ interface itemDataType {
   image_url: string
   region: number
   prefectureId: number
-  categoryIds: number
+  categoryId: number
   featureIds: number[]
 }
 

@@ -6,7 +6,7 @@ export const itemData = [
     image_url: "//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B073N3PD1H&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=katoma02-22",
     region: 2,
     prefectureId: 1,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -16,7 +16,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51n8%2BeaipBL._AC_.jpg",
     region: 2,
     prefectureId: 1,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1]
   },
   {
@@ -26,7 +26,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51mTIS3PGHL._AC_.jpg",
     region: 2,
     prefectureId: 1,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -36,7 +36,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51TMviPEtWL._AC_.jpg",
     region: 3,
     prefectureId: 2,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 3]
   },
   {
@@ -46,7 +46,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51ZOStrRalL._AC_.jpg",
     region: 3,
     prefectureId: 2,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [1, 4]
   },
   {
@@ -56,7 +56,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61paQnP-xyL._AC_.jpg",
     region: 3,
     prefectureId: 2,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -66,7 +66,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51DDJfnRIrL._AC_.jpg",
     region: 3,
     prefectureId: 3,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1]
   },
   {
@@ -76,7 +76,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/21HqzpQjItL._AC_.jpg",
     region: 3,
     prefectureId: 3,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -86,7 +86,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/91fDhHxnJiL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 3,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -96,7 +96,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71uPipWtLSL._AC_SL1033_.jpg",
     region: 3,
     prefectureId: 5,
-    categoryIds: 2,
+    categoryId: 2,
     featureIds: [4]
   },
   {
@@ -106,7 +106,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51x3c-THUnL._AC_.jpg",
     region: 3,
     prefectureId: 5,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [1]
   },
   {
@@ -116,7 +116,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51vWNTNgkeL._AC_.jpg",
     region: 3,
     prefectureId: 5,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4]
   },
   {
@@ -126,7 +126,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71pHlizmQyL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 4,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3]
   },
   {
@@ -136,7 +136,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71H96UXgaGL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 4,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3, 7]
   },
   {
@@ -146,7 +146,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/718qiUtnrLL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 4,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -156,7 +156,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81%2BqBhKrcEL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 4,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -166,7 +166,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51IF7p86nvL._AC_SL1152_.jpg",
     region: 3,
     prefectureId: 6,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [5]
   },
   {
@@ -176,7 +176,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71kUjghh9cL._AC_SL1000_.jpg",
     region: 3,
     prefectureId: 6,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4, 5]
   },
   {
@@ -186,7 +186,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41AnW2sVZpL._AC_.jpg",
     region: 3,
     prefectureId: 6,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [3, 6]
   },
   {
@@ -196,7 +196,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/31XDmk60niL._AC_.jpg",
     region: 3,
     prefectureId: 7,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1]
   },
   {
@@ -206,7 +206,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81qaD8giwxL._AC_SL1500_.jpg",
     region: 3,
     prefectureId: 7,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -216,7 +216,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/510SCxb1rjL._AC_.jpg",
     region: 3,
     prefectureId: 7,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [5]
   },
   {
@@ -226,7 +226,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51FnfKOeaoL._AC_.jpg",
     region: 4,
     prefectureId: 8,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3, 5]
   },
   {
@@ -236,7 +236,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/411VxBdgydL._AC_.jpg",
     region: 4,
     prefectureId: 8,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [4, 6]
   },
   {
@@ -246,7 +246,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61ibR4HtF2L._AC_SL1000_.jpg",
     region: 4,
     prefectureId: 8,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 5]
   },
   {
@@ -256,7 +256,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81hnlsE5KWL._AC_SL1500_.jpg",
     region: 4,
     prefectureId: 9,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -266,7 +266,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71%2BLWelzmsL._AC_SL1437_.jpg",
     region: 4,
     prefectureId: 9,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4, 5]
   },
   {
@@ -276,7 +276,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/31wKeJkelyL._AC_.jpg",
     region: 4,
     prefectureId: 9,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [1, 5]
   },
   {
@@ -286,7 +286,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41-iI%2BiQOiL._AC_.jpg",
     region: 4,
     prefectureId: 10,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [4, 5]
   },
   {
@@ -296,7 +296,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51Q464WWioL._AC_.jpg",
     region: 4,
     prefectureId: 10,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2, 5]
   },
   {
@@ -306,7 +306,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41zsvOt-PDL._AC_.jpg",
     region: 4,
     prefectureId: 10,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 5]
   },
   {
@@ -316,7 +316,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51XvV456uUL._AC_.jpg",
     region: 4,
     prefectureId: 11,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [4, 6]
   },
   {
@@ -326,7 +326,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51nL12pb53L._AC_.jpg",
     region: 4,
     prefectureId: 11,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3, 5]
   },
   {
@@ -336,7 +336,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/513efqvsBJL._AC_.jpg",
     region: 4,
     prefectureId: 11,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2, 5]
   },
   {
@@ -346,7 +346,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/616G58D6TrL._AC_.jpg",
     region: 4,
     prefectureId: 12,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -356,7 +356,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41PtxxlUNZL._AC_.jpg",
     region: 4,
     prefectureId: 12,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3]
   },
   {
@@ -366,7 +366,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61hPlADT0fL._AC_.jpg",
     region: 4,
     prefectureId: 12,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -376,7 +376,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51-S7bsSQGL._AC_.jpg",
     region: 4,
     prefectureId: 13,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -386,7 +386,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71UxlJpfWLL._AC_SL1000_.jpg",
     region: 4,
     prefectureId: 13,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -396,7 +396,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/5116jfLQr2L._AC_.jpg",
     region: 4,
     prefectureId: 13,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -406,7 +406,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51abYsBikdL._AC_.jpg",
     region: 4,
     prefectureId: 14,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -416,7 +416,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51Rfe%2BzbNUL._AC_.jpg",
     region: 4,
     prefectureId: 14,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -426,7 +426,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/510oTp1VjEL._AC_.jpg",
     region: 4,
     prefectureId: 14,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -436,7 +436,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41pCItBDIaL._AC_.jpg",
     region: 5,
     prefectureId: 17,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [1, 5]
   },
   {
@@ -446,7 +446,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41yyx4mVAFL._AC_.jpg",
     region: 5,
     prefectureId: 17,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -456,7 +456,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/5163yzazCZL._AC_.jpg",
     region: 5,
     prefectureId: 17,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [4, 5]
   },
   {
@@ -466,7 +466,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41ibtW3rVIL._AC_.jpg",
     region: 5,
     prefectureId: 18,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -476,7 +476,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51BRN4PiPpL._AC_.jpg",
     region: 5,
     prefectureId: 18,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -486,7 +486,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51rzZjn3bgL._AC_.jpg",
     region: 5,
     prefectureId: 18,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [5]
   },
   {
@@ -496,7 +496,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51sf2ArXLTL._AC_SL1050_.jpg",
     region: 5,
     prefectureId: 19,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [5]
   },
   {
@@ -506,7 +506,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61BReC80wmL._AC_SL1000_.jpg",
     region: 5,
     prefectureId: 19,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [1, 5]
   },
   {
@@ -516,7 +516,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61QP0RBxh6L._AC_.jpg",
     region: 5,
     prefectureId: 19,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -526,7 +526,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51Qy9sjgj3L._AC_.jpg",
     region: 5,
     prefectureId: 20,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -536,7 +536,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61oIJjqyfRL._AC_SL1001_.jpg",
     region: 5,
     prefectureId: 20,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -546,7 +546,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/511u1I%2BV1GL._AC_.jpg",
     region: 5,
     prefectureId: 20,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2, 5]
   },
   {
@@ -556,7 +556,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/712C9dhnF%2BL._AC_SL1500_.jpg",
     region: 5,
     prefectureId: 15,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [4, 6]
   },
   {
@@ -566,7 +566,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51M8cVf8CyL._AC_.jpg",
     region: 5,
     prefectureId: 15,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -576,7 +576,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61jJH3rlrDL._AC_.jpg",
     region: 5,
     prefectureId: 15,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [1, 3]
   },
   {
@@ -586,7 +586,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61ASdEghGqL._AC_SL1000_.jpg",
     region: 5,
     prefectureId: 16,
-    categoryIds: 5,
+    categoryId: 5,
     featureIds: [4, 6]
   },
   {
@@ -596,7 +596,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51CaJjVBnTL._AC_.jpg",
     region: 5,
     prefectureId: 16,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2, 5]
   },
   {
@@ -606,7 +606,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41UhaxjpZOL._AC_.jpg",
     region: 5,
     prefectureId: 16,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -616,7 +616,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51M1U5ezlhL._AC_.jpg",
     region: 5,
     prefectureId: 23,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -626,7 +626,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71RSHpJ7FUL._AC_SL1500_.jpg",
     region: 5,
     prefectureId: 23,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 5]
   },
   {
@@ -636,7 +636,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51bHkG2xlTL._AC_.jpg",
     region: 5,
     prefectureId: 23,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -646,7 +646,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61u%2BRjBaauL._AC_.jpg",
     region: 5,
     prefectureId: 21,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -656,7 +656,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61fAirXKTIL._AC_SL1200_.jpg",
     region: 5,
     prefectureId: 21,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4, 6]
   },
   {
@@ -666,7 +666,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81Wleer8W-L._AC_SL1500_.jpg",
     region: 5,
     prefectureId: 21,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [1, 5]
   },
   {
@@ -676,7 +676,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41ilOy8sNLL._AC_.jpg",
     region: 5,
     prefectureId: 22,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 4]
   },
   {
@@ -686,7 +686,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/713qT34ZIgL._AC_SL1037_.jpg",
     region: 5,
     prefectureId: 22,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -696,7 +696,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/31TQ4PRog0L._AC_.jpg",
     region: 5,
     prefectureId: 22,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4, 6]
   },
   {
@@ -706,7 +706,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51m5bD7x0zL._AC_.jpg",
     region: 6,
     prefectureId: 24,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3]
   },
   {
@@ -716,7 +716,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61O55oRpt2L._AC_.jpg",
     region: 6,
     prefectureId: 24,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [1]
   },
   {
@@ -726,7 +726,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81LdCyjgsKL._AC_SL1500_.jpg",
     region: 6,
     prefectureId: 24,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [5]
   },
   {
@@ -736,7 +736,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/5193cX80zfL._AC_.jpg",
     region: 6,
     prefectureId: 25,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -746,7 +746,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51vfBGspvgL._AC_.jpg",
     region: 6,
     prefectureId: 25,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -756,7 +756,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/513dw6MHGGL._AC_.jpg",
     region: 6,
     prefectureId: 25,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4]
   },
   {
@@ -766,7 +766,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51O6SYljU0L._AC_.jpg",
     region: 6,
     prefectureId: 26,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [2, 6]
   },
   {
@@ -776,7 +776,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51lwsZ14uwL._AC_.jpg",
     region: 6,
     prefectureId: 26,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [5]
   },
   {
@@ -786,7 +786,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/715FrFJBMOL._AC_SX679_.jpg",
     region: 6,
     prefectureId: 26,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4]
   },
   {
@@ -796,7 +796,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51rV5-9RLVL._AC_.jpg",
     region: 6,
     prefectureId: 27,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1]
   },
   {
@@ -806,7 +806,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61E2q-PNDWL._AC_SX679_.jpg",
     region: 6,
     prefectureId: 27,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 4, 7]
   },
   {
@@ -816,7 +816,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61NjFE5rTkL._AC_SL1000_.jpg",
     region: 6,
     prefectureId: 27,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [4, 7]
   },
   {
@@ -826,7 +826,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41YFM6rG46L._AC_.jpg",
     region: 6,
     prefectureId: 28,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4]
   },
   {
@@ -836,7 +836,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41SYPIlxvIL._AC_.jpg",
     region: 6,
     prefectureId: 28,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 6]
   },
   {
@@ -846,7 +846,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41G1MojN0PL._AC_.jpg",
     region: 6,
     prefectureId: 28,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [2, 6]
   },
   {
@@ -856,7 +856,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61Hq06aHrTL._AC_.jpg",
     region: 6,
     prefectureId: 29,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 7]
   },
   {
@@ -866,7 +866,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41fOrPcBiPL._AC_.jpg",
     region: 6,
     prefectureId: 29,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4]
   },
   {
@@ -876,7 +876,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41EyRpKf7yL._AC_.jpg",
     region: 6,
     prefectureId: 29,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2, 4]
   },
   {
@@ -886,7 +886,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61WAtTexhkL._AC_SL1000_.jpg",
     region: 6,
     prefectureId: 30,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4, 6]
   },
   {
@@ -896,7 +896,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81XwE4fp-yL._AC_SL1200_.jpg",
     region: 6,
     prefectureId: 30,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -906,7 +906,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71L%2B1utKwuL._AC_SL1500_.jpg",
     region: 6,
     prefectureId: 30,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -916,7 +916,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51XwwpulKAL._AC_.jpg",
     region: 7,
     prefectureId: 31,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [3, 6]
   },
   {
@@ -926,7 +926,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/91%2BsENqFBbL._AC_SL1500_.jpg",
     region: 7,
     prefectureId: 31,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -936,7 +936,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81Bplq4zFML._AC_SL1500_.jpg",
     region: 7,
     prefectureId: 31,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [5]
   },
   {
@@ -946,7 +946,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/817%2B5xAtT3L._AC_SX679_.jpg",
     region: 7,
     prefectureId: 32,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -956,7 +956,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51qVCJUp10L._AC_.jpg",
     region: 7,
     prefectureId: 32,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -966,7 +966,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41cF4L%2BjPZL._AC_.jpg",
     region: 7,
     prefectureId: 32,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [4, 6]
   },
   {
@@ -976,7 +976,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41qVHOKuKcL._AC_.jpg",
     region: 7,
     prefectureId: 33,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 4]
   },
   {
@@ -986,7 +986,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51z2RHwi27L._AC_.jpg",
     region: 7,
     prefectureId: 33,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -996,7 +996,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41K2MiAQYgL._AC_.jpg",
     region: 7,
     prefectureId: 33,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -1006,7 +1006,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41uCPaV6RhL._AC_.jpg",
     region: 7,
     prefectureId: 34,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [3, 7]
   },
   {
@@ -1016,7 +1016,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61VK%2BAVKQhL._AC_.jpg",
     region: 7,
     prefectureId: 34,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -1026,7 +1026,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/716lMrhJnqL._AC_SY879_.jpg",
     region: 7,
     prefectureId: 34,
-    categoryIds: 5,
+    categoryId: 5,
     featureIds: [4]
   },
   {
@@ -1036,7 +1036,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61TNGjtYqkL._AC_.jpg",
     region: 7,
     prefectureId: 35,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 4]
   },
   {
@@ -1046,7 +1046,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81pOJxFS6NL._AC_SY879_.jpg",
     region: 7,
     prefectureId: 35,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [4]
   },
   {
@@ -1056,7 +1056,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61CSmzvdTAL._AC_.jpg",
     region: 7,
     prefectureId: 35,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -1066,7 +1066,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/4143vey5bBL._AC_.jpg",
     region: 8,
     prefectureId: 38,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -1076,7 +1076,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41agXd-ydhL._AC_.jpg",
     region: 8,
     prefectureId: 38,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -1086,7 +1086,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41fpy2MqoTL._AC_.jpg",
     region: 8,
     prefectureId: 38,
-    categoryIds: 6,
+    categoryId: 6,
     featureIds: [1, 3]
   },
   {
@@ -1096,7 +1096,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71uH48NZiML._AC_SL1500_.jpg",
     region: 8,
     prefectureId: 36,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 3]
   },
   {
@@ -1106,7 +1106,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51ccXxKM6fL._AC_.jpg",
     region: 8,
     prefectureId: 36,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -1116,7 +1116,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41tEEOxIUKL._AC_.jpg",
     region: 8,
     prefectureId: 36,
-    categoryIds: 5,
+    categoryId: 5,
     featureIds: [1, 4]
   },
   {
@@ -1126,7 +1126,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41NALRiiOYL._AC_.jpg",
     region: 8,
     prefectureId: 37,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2]
   },
   {
@@ -1136,7 +1136,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41heoHC9QAL._AC_.jpg",
     region: 8,
     prefectureId: 37,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [2, 6]
   },
   {
@@ -1146,7 +1146,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41jvkvg2yML._AC_.jpg",
     region: 8,
     prefectureId: 37,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [4]
   },
   {
@@ -1156,7 +1156,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51HUZAbbIoL._AC_.jpg",
     region: 8,
     prefectureId: 39,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [2]
   },
   {
@@ -1166,7 +1166,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41CNP8eOQ4L._AC_.jpg",
     region: 8,
     prefectureId: 39,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -1176,7 +1176,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71g1JiLiAXL._AC_SL1500_.jpg",
     region: 8,
     prefectureId: 39,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [2, 4]
   },
   {
@@ -1186,7 +1186,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71fwIoYr14L._AC_SL1000_.jpg",
     region: 9,
     prefectureId: 40,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -1196,7 +1196,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41rr208dd8L._AC_.jpg",
     region: 9,
     prefectureId: 40,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
   {
@@ -1206,7 +1206,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51wCHow2C7L._AC_.jpg",
     region: 9,
     prefectureId: 40,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -1216,7 +1216,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/814pm34w77L._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 40,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1226,7 +1226,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41xVWILHo9L._AC_.jpg",
     region: 9,
     prefectureId: 41,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -1236,7 +1236,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51E98NdtATL._AC_.jpg",
     region: 9,
     prefectureId: 41,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1246,7 +1246,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/91NyjKJDUkL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 41,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3, 7]
   },
   {
@@ -1256,7 +1256,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71gojFTrhWL._AC_SL1000_.jpg",
     region: 9,
     prefectureId: 42,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [1, 6, 7]
   },
   {
@@ -1266,7 +1266,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61xEDXmKr5L._AC_SL1000_.jpg",
     region: 9,
     prefectureId: 42,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1276,7 +1276,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61up8GGeRvL._AC_SL1000_.jpg",
     region: 9,
     prefectureId: 42,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4]
   },
   {
@@ -1286,7 +1286,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71Ly4BVVbfL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 43,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3]
   },
   {
@@ -1296,7 +1296,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71E7AoO926L._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 43,
-    categoryIds: 7,
+    categoryId: 7,
     featureIds: [2, 4, 6]
   },
   {
@@ -1306,7 +1306,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/814Lj35nGJL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 43,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1316,7 +1316,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/510RwizAGsL._AC_.jpg",
     region: 9,
     prefectureId: 44,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [2, 3]
   },
   {
@@ -1326,7 +1326,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41pMoHNpUDL._AC_.jpg",
     region: 9,
     prefectureId: 44,
-    categoryIds: 5,
+    categoryId: 5,
     featureIds: [1, 4]
   },
   {
@@ -1336,7 +1336,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51x1xENzLxL._AC_.jpg",
     region: 9,
     prefectureId: 44,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1346,7 +1346,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71X-jUCHFjL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 45,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3]
   },
   {
@@ -1356,7 +1356,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/718LqwbdXxL._AC_SL1000_.jpg",
     region: 9,
     prefectureId: 45,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1366,7 +1366,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/61P3C4xsfiL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 45,
-    categoryIds: 5,
+    categoryId: 5,
     featureIds: [2, 5]
   },
   {
@@ -1376,7 +1376,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71W9gK2ns6L._AC_SL1200_.jpg",
     region: 9,
     prefectureId: 46,
-    categoryIds: 4,
+    categoryId: 4,
     featureIds: [3, 6]
   },
   {
@@ -1386,7 +1386,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81D-ry4R7iL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 46,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 4, 5]
   },
   {
@@ -1396,7 +1396,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81NLgh2DAsL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 46,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [3, 6]
   },
   {
@@ -1406,7 +1406,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71Ya5K85v0L._AC_SL1378_.jpg",
     region: 9,
     prefectureId: 47,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 5]
   },
   {
@@ -1416,7 +1416,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51X1dq6A1EL._AC_.jpg",
     region: 9,
     prefectureId: 47,
-    categoryIds: 1,
+    categoryId: 1,
     featureIds: [1, 5]
   },
   {
@@ -1426,7 +1426,7 @@ export const itemData = [
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71naGVR7bKL._AC_SL1500_.jpg",
     region: 9,
     prefectureId: 47,
-    categoryIds: 3,
+    categoryId: 3,
     featureIds: [1, 3]
   },
 ]

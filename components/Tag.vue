@@ -1,13 +1,30 @@
 <template>
   <div class="tag">
     <div class="tag__wrap">
-      <p class="tag__wrap__prefecture tag__icon">#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
-      <p class="tag__wrap__category tag__icon">#{{getCategoryTag(itemData[0].categoryIds)}}</p>
-      <p
-        class="tag__wrap__feature tag__icon"
+      <nuxt-link
+        class="tag__wrap__content"
+        :to="{path: 'result', query: setPrefectureQuery(itemData[0])}"
+      >
+        <p
+          class="tag__wrap__content__prefecture tag__icon"
+        >#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
+      </nuxt-link>
+      <nuxt-link
+        class="tag__wrap__content"
+        :to="{path: 'result', query: setCategoryQuery(itemData[0])}"
+      >
+        <p
+          class="tag__wrap__content__category tag__icon"
+        >#{{getCategoryTag(itemData[0].categoryId)}}</p>
+      </nuxt-link>
+      <nuxt-link
+        class="tag__wrap__content"
+        :to="{path: 'result', query: setFeatureQuery(featureId)}"
         v-for="(featureId, index) in itemData[0].featureIds"
         :key="index"
-      >#{{getFeatureTag(featureId)}}</p>
+      >
+        <p class="tag__wrap__content__feature tag__icon">#{{getFeatureTag(featureId)}}</p>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -42,6 +59,35 @@ export default class Tag extends Vue {
   getFeatureTag(featureId: number) {
     return getFeatureTag(this.$store.state.featureData, featureId);
   }
+
+  setPrefectureQuery(itemData: any) {
+    interface queryType {
+      region?: string;
+      prefectures?: string;
+    }
+    let query: queryType = {};
+    query.region = itemData.region.toString();
+    query.prefectures = itemData.prefectureId.toString();
+    return query;
+  }
+
+  setCategoryQuery(itemData: any) {
+    interface queryType {
+      categoryIds?: string;
+    }
+    let query: queryType = {};
+    query.categoryIds = itemData.categoryId.toString();
+    return query;
+  }
+
+  setFeatureQuery(featureId: number) {
+    interface queryType {
+      featureIds?: string;
+    }
+    let query: queryType = {};
+    query.featureIds = featureId.toString();
+    return query;
+  }
 }
 </script>
 
@@ -50,6 +96,10 @@ export default class Tag extends Vue {
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+    &__content {
+      text-decoration: none;
+      display: block;
+    }
   }
   &__icon {
     background-color: #4f98ca;

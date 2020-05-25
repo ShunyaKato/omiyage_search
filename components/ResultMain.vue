@@ -133,8 +133,8 @@ export default class ResultMain extends Vue {
       if (this.setCategoryArray.length === 0) {
         return item;
       }
-      // setCategoryArrayにitem.CategoryIdsが含まれるかどうか
-      if (this.setCategoryArray.includes(item.categoryIds) === true) {
+      // setCategoryArrayにitem.CategoryIdが含まれるかどうか
+      if (this.setCategoryArray.includes(item.categoryId) === true) {
         return item;
       }
     });
