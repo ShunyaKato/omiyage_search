@@ -1,7 +1,7 @@
 <template>
   <div class="tag">
     <div class="tag__wrap">
-      <a class="tag__wrap__content">
+      <a class="tag__wrap__content" @click="clickPrefectureTag(itemData[0].prefectureId)">
         <p
           class="tag__wrap__content__prefecture tag__icon"
         >#{{getPrefectureTag(itemData[0].prefectureId)}}</p>
@@ -51,6 +51,10 @@ export default class Tag extends Vue {
 
   getFeatureTag(featureId: number) {
     return getFeatureTag(this.$store.state.featureData, featureId);
+  }
+
+  clickPrefectureTag(prefectureId: number) {
+    this.$emit("prefectureTagId", prefectureId);
   }
 }
 </script>
