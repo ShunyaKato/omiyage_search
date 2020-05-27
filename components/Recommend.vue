@@ -70,11 +70,12 @@ export default class Recommend extends Vue {
   padding: 30px 0;
   &__title {
     font-size: 20px;
-    background-color: #50d890;
+    background-color: #20b867;
     border-radius: 5px;
     padding: 5px 10px;
     position: relative;
     margin-bottom: 30px;
+    color: #ffffff;
     &::after {
       content: "";
       position: absolute;
@@ -85,7 +86,7 @@ export default class Recommend extends Vue {
       height: 0px;
       margin: auto;
       border-style: solid;
-      border-color: #50d890 transparent transparent transparent;
+      border-color: #20b867 transparent transparent transparent;
       border-width: 20px 20px 0 20px;
     }
   }
