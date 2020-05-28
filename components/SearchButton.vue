@@ -44,7 +44,7 @@ export default class SearchBotton extends Vue {
     text-decoration: none;
     background-color: #4f98ca;
     padding: 9px 30px;
-    border-radius: 20px;
+    border-radius: 30px;
     &:hover {
       opacity: 0.8;
     }
