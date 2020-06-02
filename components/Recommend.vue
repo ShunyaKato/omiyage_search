@@ -69,7 +69,26 @@ export default class Recommend extends Vue {
   justify-content: center;
   padding: 30px 0;
   &__title {
-    font-size: 20px;
+    font-size: 24px;
+    background-color: #20b867;
+    border-radius: 30px;
+    padding: 5px 25px;
+    position: relative;
+    margin-bottom: 30px;
+    color: #ffffff;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+      margin: auto;
+      border-style: solid;
+      border-color: #20b867 transparent transparent transparent;
+      border-width: 20px 20px 0 20px;
+    }
   }
   &__wrap {
     width: 100%;
