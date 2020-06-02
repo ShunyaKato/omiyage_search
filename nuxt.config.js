@@ -49,7 +49,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -70,6 +71,13 @@ export default {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['fas']
       }
+    ]
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://zen-dijkstra-3712ef.netlify.app/',
+    routes: [
+      '/result'
     ]
   }
 }
