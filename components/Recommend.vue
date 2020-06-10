@@ -101,9 +101,14 @@ export default class Recommend extends Vue {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         &__image {
           max-width: 200px;
           max-height: 100%;
+          transition: 0.5s;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
       &__name {
