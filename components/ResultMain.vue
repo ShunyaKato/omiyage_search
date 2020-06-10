@@ -235,9 +235,14 @@ export default class ResultMain extends Vue {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         &__image {
           max-width: 100%;
           max-height: 100%;
+          transition: 0.5s;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
       &__name {
